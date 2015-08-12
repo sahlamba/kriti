@@ -1,0 +1,11 @@
+/* line 3, ../sass/partials/_base.sass */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: sans-serif;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
