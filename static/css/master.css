@@ -1,4 +1,4 @@
-/* line 18, ../sass/partials/_base.sass */
+/* line 17, ../sass/partials/_base.sass */
 * {
   margin: 0;
   padding: 0;
@@ -11,14 +11,33 @@
   outline: none;
 }
 
+/* line 27, ../sass/partials/_base.sass */
+a, a:link, a:visited, a:hover, a:focus {
+  text-decoration: inherit;
+  color: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  font-family: inherit;
+}
+
+/* line 34, ../sass/partials/_base.sass */
+.white {
+  color: white;
+}
+
+/* line 37, ../sass/partials/_base.sass */
+.inline-block-middle {
+  display: inline-block;
+  vertical-align: middle;
+}
+
 /* line 1, ../sass/partials/_header.sass */
 .header {
-  overflow: hidden;
   background-color: #1a2634;
   width: 100%;
   height: 51px;
 }
-/* line 6, ../sass/partials/_header.sass */
+/* line 5, ../sass/partials/_header.sass */
 .header .inner {
   width: 100%;
   height: 51px;
@@ -26,28 +45,81 @@
   padding: 0 50px;
   margin: 0 auto;
 }
-/* line 13, ../sass/partials/_header.sass */
+/* line 12, ../sass/partials/_header.sass */
 .header .inner .logo {
   display: inline-block;
   vertical-align: middle;
   margin-top: 5px;
 }
-/* line 17, ../sass/partials/_header.sass */
+/* line 15, ../sass/partials/_header.sass */
 .header .inner .logo img {
   height: 40px;
 }
-/* line 19, ../sass/partials/_header.sass */
+/* line 17, ../sass/partials/_header.sass */
+.header .inner .add-new {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+  color: white;
+  background-color: #e84545;
+  padding: 12px;
+  cursor: pointer;
+}
+/* line 25, ../sass/partials/_header.sass */
+.header .inner .add-new p {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 16px;
+  font-weight: bold;
+}
+/* line 29, ../sass/partials/_header.sass */
+.header .inner .add-new i {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 20px;
+  margin-right: 12px;
+}
+/* line 33, ../sass/partials/_header.sass */
+.header .inner .add-new:hover .add-new-options {
+  display: block;
+}
+/* line 35, ../sass/partials/_header.sass */
+.header .inner .add-new .add-new-options {
+  display: none;
+  position: absolute;
+  top: 51px;
+  left: 0;
+  min-width: 118px;
+  background-color: #903749;
+  border-radius: 0 0 3px 3px;
+}
+/* line 43, ../sass/partials/_header.sass */
+.header .inner .add-new .add-new-options ul {
+  list-style-type: none;
+}
+/* line 45, ../sass/partials/_header.sass */
+.header .inner .add-new .add-new-options ul li {
+  color: white;
+  padding: 12px;
+}
+/* line 48, ../sass/partials/_header.sass */
+.header .inner .add-new .add-new-options ul li:hover {
+  cursor: pointer;
+  background-color: #53354a;
+}
+/* line 51, ../sass/partials/_header.sass */
 .header .inner .user-panel {
   float: right;
   display: inline-block;
   vertical-align: middle;
 }
-/* line 23, ../sass/partials/_header.sass */
+/* line 54, ../sass/partials/_header.sass */
 .header .inner .user-panel .search {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 26, ../sass/partials/_header.sass */
+/* line 56, ../sass/partials/_header.sass */
 .header .inner .user-panel .search i {
   font-size: 22px;
   margin: 6px 5px 0 0;
@@ -55,7 +127,7 @@
   display: inline-block;
   vertical-align: top;
 }
-/* line 32, ../sass/partials/_header.sass */
+/* line 62, ../sass/partials/_header.sass */
 .header .inner .user-panel .search input {
   font-size: 14px;
   line-height: 27px;
@@ -66,23 +138,70 @@
   border: 0;
   border-radius: 14px;
 }
-/* line 41, ../sass/partials/_header.sass */
+/* line 71, ../sass/partials/_header.sass */
 .header .inner .user-panel .user {
+  position: relative;
   display: inline-block;
   margin-left: 100px;
 }
-/* line 44, ../sass/partials/_header.sass */
-.header .inner .user-panel .user p {
+/* line 76, ../sass/partials/_header.sass */
+.header .inner .user-panel .user a p.username {
   display: inline-block;
   vertical-align: middle;
   color: white;
 }
-/* line 48, ../sass/partials/_header.sass */
-.header .inner .user-panel .user img.user-pic {
+/* line 79, ../sass/partials/_header.sass */
+.header .inner .user-panel .user a p.username:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+/* line 82, ../sass/partials/_header.sass */
+.header .inner .user-panel .user .user-pic-container {
+  position: relative;
   display: inline-block;
   vertical-align: middle;
   margin-left: 15px;
+  cursor: pointer;
+}
+/* line 87, ../sass/partials/_header.sass */
+.header .inner .user-panel .user .user-pic-container img.user-pic {
+  display: inline-block;
+  vertical-align: middle;
   height: 50px;
   border: 3px solid #203e5f;
   border-radius: 50%;
+}
+/* line 92, ../sass/partials/_header.sass */
+.header .inner .user-panel .user .user-pic-container:hover .user-options {
+  display: block;
+}
+/* line 94, ../sass/partials/_header.sass */
+.header .inner .user-panel .user .user-pic-container .user-options {
+  display: none;
+  position: absolute;
+  top: 51px;
+  right: 0;
+  min-width: 150px;
+  overflow: hidden;
+  background-color: #203e5f;
+  border-radius: 0 0 3px 3px;
+}
+/* line 103, ../sass/partials/_header.sass */
+.header .inner .user-panel .user .user-pic-container .user-options ul {
+  list-style-type: none;
+}
+/* line 106, ../sass/partials/_header.sass */
+.header .inner .user-panel .user .user-pic-container .user-options ul li a {
+  display: block;
+  color: white;
+  padding: 12px;
+}
+/* line 110, ../sass/partials/_header.sass */
+.header .inner .user-panel .user .user-pic-container .user-options ul li a:hover {
+  cursor: pointer;
+  background-color: #1a2634;
+}
+/* line 113, ../sass/partials/_header.sass */
+.header .inner .user-panel .user .user-pic-container .user-options ul li a i {
+  margin-right: 12px;
 }

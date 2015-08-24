@@ -6,6 +6,7 @@ app.factory('ItemService', ['$q', '$http',
       getAllItems: function () {
         var defer = $q.defer();
 
+        // Make http request here
         setTimeout(function () {
           defer.resolve({
             'name': 'test'

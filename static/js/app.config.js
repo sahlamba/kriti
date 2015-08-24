@@ -15,6 +15,15 @@ app.config(['$stateProvider', '$urlRouterProvider', '$interpolateProvider',
             return ItemService.getAllItems();
           }
         }
+      }).state('profile', {
+        url: '/:id/',
+        templateUrl: '/static/views/profile.html',
+        controller: 'ProfileCtrl',
+        resolve: {
+          items: function(ItemService) {
+            return ItemService.getAllItems();
+          }
+        }
       });
 
     $interpolateProvider.startSymbol('{~');

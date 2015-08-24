@@ -3,16 +3,39 @@
     <div class="logo">
      <img src="/static/images/logo.png" alt="Kriti" />
     </div>
+    <div class="add-new">
+      <i class="fi-plus"></i><p>Add new</p>
+      <div class="add-new-options">
+        <ul>
+          <li>Article</li>
+          <li>Poem</li>
+          <li>Painting</li>
+          <li>Sketch</li>
+          <li>Graphic</li>
+          <li>Photograph</li>
+        </ul>
+      </div>
+    </div>
     <div class="user-panel">
       <div class="search">
         <i class="fi-magnifying-glass"></i>
         <input type="text" name="search" placeholder="Search">
       </div>
       <div class="user">
-        <p class="username">
-          Mila Kunis
-        </p>
-        <img class="user-pic" src="http://media.onsugar.com/files/2011/01/05/1/192/1922153/ea8f1ca1b21ed7a8_mila.jpg" alt="Username" />
+        <a ui-sref="profile({id: user.enrolment})">
+          <p class="username" ng-bind="user.name"></p>
+        </a>
+        <div class="user-pic-container">
+          <img class="user-pic" ng-src="{~user.photo~}" />
+          <i class="fa fa-caret-down white inline-block-middle"></i>
+          <div class="user-options">
+            <ul>
+              <li><a ui-sref="profile({id: user.enrolment})"><i class="fi-layout"></i>Your Profile</a></li>
+              <li><a href="https://channeli.in"><i class="fi-info"></i>Channeli</a></li>
+              <li><a href="https://channeli.in"><i class="fi-power"></i>Log Out</a></li>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
