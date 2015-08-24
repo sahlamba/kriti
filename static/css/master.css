@@ -1,4 +1,4 @@
-/* line 5, ../sass/partials/_base.sass */
+/* line 18, ../sass/partials/_base.sass */
 * {
   margin: 0;
   padding: 0;
@@ -8,52 +8,81 @@
   -webkit-font-smoothing: antialiased;
   box-sizing: border-box;
   -webkit-box-sizing: border-box;
+  outline: none;
 }
 
 /* line 1, ../sass/partials/_header.sass */
 .header {
   overflow: hidden;
-  background-color: #555555;
+  background-color: #1a2634;
+  width: 100%;
+  height: 51px;
 }
-/* line 4, ../sass/partials/_header.sass */
+/* line 6, ../sass/partials/_header.sass */
 .header .inner {
   width: 100%;
-  max-width: 1366px;
-  height: 50px;
-  padding: 5px 100px;
+  height: 51px;
+  max-height: 51px;
+  padding: 0 50px;
   margin: 0 auto;
 }
-/* line 10, ../sass/partials/_header.sass */
+/* line 13, ../sass/partials/_header.sass */
 .header .inner .logo {
   display: inline-block;
   vertical-align: middle;
+  margin-top: 5px;
 }
-/* line 13, ../sass/partials/_header.sass */
+/* line 17, ../sass/partials/_header.sass */
 .header .inner .logo img {
   height: 40px;
 }
-/* line 15, ../sass/partials/_header.sass */
+/* line 19, ../sass/partials/_header.sass */
 .header .inner .user-panel {
   float: right;
   display: inline-block;
   vertical-align: middle;
 }
-/* line 20, ../sass/partials/_header.sass */
+/* line 23, ../sass/partials/_header.sass */
+.header .inner .user-panel .search {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 26, ../sass/partials/_header.sass */
 .header .inner .user-panel .search i {
-  font-size: 26px;
-  margin: 4px 5px 0 0;
+  font-size: 22px;
+  margin: 6px 5px 0 0;
   color: white;
   display: inline-block;
   vertical-align: top;
 }
-/* line 26, ../sass/partials/_header.sass */
+/* line 32, ../sass/partials/_header.sass */
 .header .inner .user-panel .search input {
-  font-size: 16px;
-  font-weight: lighter;
-  line-height: 32px;
-  height: 32px;
-  margin: 5px 0;
-  padding: 3px 7px;
+  font-size: 14px;
+  line-height: 27px;
+  height: 27px;
+  width: 240px;
+  margin: 7px 0;
+  padding: 3px 12px;
   border: 0;
-  border-radius: 2px;
+  border-radius: 14px;
+}
+/* line 41, ../sass/partials/_header.sass */
+.header .inner .user-panel .user {
+  display: inline-block;
+  margin-left: 100px;
+}
+/* line 44, ../sass/partials/_header.sass */
+.header .inner .user-panel .user p {
+  display: inline-block;
+  vertical-align: middle;
+  color: white;
+}
+/* line 48, ../sass/partials/_header.sass */
+.header .inner .user-panel .user img.user-pic {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 15px;
+  height: 50px;
+  border: 3px solid #203e5f;
+  border-radius: 50%;
 }
