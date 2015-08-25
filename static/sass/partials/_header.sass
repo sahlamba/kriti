@@ -68,6 +68,62 @@
           padding: 3px 12px
           border: 0
           border-radius: 14px
+        .search-options-container
+          position: relative
+          +inline-block
+          background-color: $light
+          color: #fff
+          width: 80px
+          margin-left: 5px
+          padding: 1px 3px 3px 3px
+          border: 0
+          border-radius: 12px
+          cursor: pointer
+          &:hover
+            .search-options
+              display: block
+            & > p
+              text-decoration: underline
+          p
+            +inline-block
+            text-transform: capitalize
+            margin-left: 6px
+          i
+            +inline-block
+            float: right
+            font-size: 12px
+            margin-top: 5px
+            margin-right: 5px
+            z-index: 10
+          .search-options
+            display: none
+            position: absolute
+            top: 12px
+            right: 0
+            background-color: $light
+            color: #fff
+            width: 150px
+            overflow: hidden
+            padding-top: 14px
+            border: 0
+            border-radius: 3px 0 3px 3px
+            z-index: -1
+            ul
+              list-style-type: none
+              li
+                padding: 8px
+                background-color: $light
+                cursor: auto
+                &:hover
+                  background-color: $dark
+                p
+                  +inline-block
+                  text-transform: capitalize
+                input
+                  +inline-block
+                  float: right
+                  width: 12px
+                  margin: -3px 5px 0 0
       .user
         position: relative
         display: inline-block

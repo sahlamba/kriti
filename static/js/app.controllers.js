@@ -10,6 +10,12 @@ app.controller('MainCtrl', ['$rootScope', '$scope', '$state',
       'photo': 'http://media.onsugar.com/files/2011/01/05/1/192/1922153/ea8f1ca1b21ed7a8_mila.jpg',
       'enrolment': '13117060'
     };
+
+    $scope.search = {
+      'query': null,
+      'in': 'all',
+      'options': ['all', 'article', 'poem', 'user']
+    }
   }
 ]);
 

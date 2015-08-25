@@ -19,7 +19,20 @@
     <div class="user-panel">
       <div class="search">
         <i class="fi-magnifying-glass"></i>
-        <input type="text" name="search" placeholder="Search">
+        <input type="text" name="search" ng-model="search.query" placeholder="Search">
+        <div class="search-options-container">
+          <p ng-bind="search.in"></p>
+          <i class="fa fa-caret-down"></i>
+          <div class="search-options">
+            <form>
+              <ul>
+                <li ng-repeat="option in search.options">
+                  <p ng-bind="option"></p><input type="radio" ng-model="search.in" value="{~option~}" />
+                </li>
+              </ul>
+            </form>
+          </div>
+        </div>
       </div>
       <div class="user">
         <a ui-sref="profile({id: user.enrolment})">
