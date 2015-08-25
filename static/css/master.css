@@ -22,11 +22,16 @@ a, a:link, a:visited, a:hover, a:focus {
 }
 
 /* line 35, ../sass/partials/_base.sass */
+body {
+  background-color: #eeeeee;
+}
+
+/* line 38, ../sass/partials/_base.sass */
 .white {
   color: white;
 }
 
-/* line 38, ../sass/partials/_base.sass */
+/* line 41, ../sass/partials/_base.sass */
 .inline-block-middle {
   display: inline-block;
   vertical-align: middle;
@@ -287,4 +292,27 @@ a, a:link, a:visited, a:hover, a:focus {
 /* line 169, ../sass/partials/_header.sass */
 .header .inner .user-panel .user .user-pic-container .user-options ul li a i {
   margin-right: 12px;
+}
+
+/* line 1, ../sass/partials/_home.sass */
+.home {
+  background-color: #eeeeee;
+  padding: 25px 50px;
+}
+/* line 4, ../sass/partials/_home.sass */
+.home .feed-item {
+  position: relative;
+  display: inline-block;
+  background-color: white;
+  padding: 5px;
+  border: 0;
+  border-radius: 3px;
+}
+/* line 11, ../sass/partials/_home.sass */
+.home .feed-item .thumbnail {
+  width: 150px;
+}
+/* line 13, ../sass/partials/_home.sass */
+.home .feed-item .thumbnail img {
+  width: 100%;
 }
