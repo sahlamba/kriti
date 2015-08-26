@@ -8,7 +8,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$interpolateProvider',
     $stateProvider
       .state('home', {
         url: '/',
-        templateUrl: '/static/views/home.html',
+        templateUrl: 'static/views/home.html',
         controller: 'HomeCtrl',
         resolve: {
           items: function(ItemService) {
@@ -17,7 +17,7 @@ app.config(['$stateProvider', '$urlRouterProvider', '$interpolateProvider',
         }
       }).state('profile', {
         url: '/:id/',
-        templateUrl: '/static/views/profile.html',
+        templateUrl: 'static/views/profile.html',
         controller: 'ProfileCtrl',
         resolve: {
           items: function(ItemService) {
