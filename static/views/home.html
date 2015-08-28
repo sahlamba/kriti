@@ -1,13 +1,23 @@
 <div class="home">
-  <div class="feed-item" ng-repeat="i in [1,2,3,4,5]">
+  <div class="feed-item" ng-repeat="i in [1,2,3,4,5,6,7,8]">
     <div class="thumbnail">
       <img src="http://www.urbansplatter.com/wp-content/uploads/2014/06/943189-mila-kunis.jpg" alt="Kunis"/>
     </div>
-    <p class="owner">Mila Kunis</p>
+    <div class="more-details">
+      <div class="tag-container">
+        <div class="tag">
+          <p class="tag-type">painting</p>
+        </div>
+      </div>
+      <div class="appreciations-container">
+        <i class="fi-star"></i>
+        <p class="appreciations">500</p>
+      </div>
+    </div>
     <p class="item-title">A piece of work!</p>
-    <div class="appreciations-container">
-      <p class="appreciations">500</p>
-      <i class="fi-star"></i>
+    <p class="owner">by Mila Kunis</p>
+    <div class="published-container">
+      <p class="published">4 hours ago</p>
     </div>
   </div>
 </div>

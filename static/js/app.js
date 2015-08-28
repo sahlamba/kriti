@@ -7,11 +7,8 @@ angular.module('kriti', [
     'kriti.home',
     'kriti.profile'
   ])
-  .config(['$stateProvider', '$urlRouterProvider', '$interpolateProvider',
-    function ($stateProvider, $urlRouterProvider, $interpolateProvider) {
-
-      $urlRouterProvider.otherwise('/');
-
+  .config(['$interpolateProvider',
+    function ($interpolateProvider) {
       $interpolateProvider.startSymbol('{~');
       $interpolateProvider.endSymbol('~}');
     }
