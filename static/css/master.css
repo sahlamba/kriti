@@ -1,4 +1,4 @@
-/* line 17, ../sass/partials/_base.sass */
+/* line 19, ../sass/partials/_base.sass */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@
   z-index: 0;
 }
 
-/* line 28, ../sass/partials/_base.sass */
+/* line 30, ../sass/partials/_base.sass */
 a, a:link, a:visited, a:hover, a:focus {
   text-decoration: inherit;
   color: inherit;
@@ -20,17 +20,17 @@ a, a:link, a:visited, a:hover, a:focus {
   font-family: inherit;
 }
 
-/* line 35, ../sass/partials/_base.sass */
+/* line 37, ../sass/partials/_base.sass */
 body {
   background-color: #eeeeee;
 }
 
-/* line 38, ../sass/partials/_base.sass */
+/* line 40, ../sass/partials/_base.sass */
 .white {
   color: white;
 }
 
-/* line 41, ../sass/partials/_base.sass */
+/* line 43, ../sass/partials/_base.sass */
 .inline-block-middle {
   display: inline-block;
   vertical-align: middle;
@@ -319,16 +319,102 @@ body {
   display: inline-block;
   background-color: white;
   width: 18%;
+  max-width: 228px;
   margin: 1%;
-  padding: 5px;
+  padding: 7px;
   border: 0;
   border-radius: 3px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
 }
-/* line 13, ../sass/partials/_home.sass */
+/* line 15, ../sass/partials/_home.sass */
 .home .feed-item .thumbnail {
   width: 100%;
 }
-/* line 15, ../sass/partials/_home.sass */
+/* line 17, ../sass/partials/_home.sass */
 .home .feed-item .thumbnail img {
   width: 100%;
+}
+/* line 19, ../sass/partials/_home.sass */
+.home .feed-item .more-details {
+  position: relative;
+  width: 100%;
+  padding: 3px 0 7px 0;
+  border-bottom: 1px solid #eeeeee;
+}
+/* line 24, ../sass/partials/_home.sass */
+.home .feed-item .more-details .tag-container {
+  position: relative;
+  width: 50%;
+  border-right: 1px solid #eeeeee;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 30, ../sass/partials/_home.sass */
+.home .feed-item .more-details .tag-container .tag {
+  padding: 1px 8px;
+  border: 0;
+  border-radius: 12px;
+  background-color: #00adb5;
+  color: white;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 37, ../sass/partials/_home.sass */
+.home .feed-item .more-details .tag-container .tag p {
+  font-size: 12px;
+  font-weight: bold;
+  line-height: 16px;
+}
+/* line 41, ../sass/partials/_home.sass */
+.home .feed-item .more-details .appreciations-container {
+  position: relative;
+  width: 48%;
+  text-align: center;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 46, ../sass/partials/_home.sass */
+.home .feed-item .more-details .appreciations-container p.appreciations {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 14px;
+  color: #393e46;
+}
+/* line 50, ../sass/partials/_home.sass */
+.home .feed-item .more-details .appreciations-container i {
+  display: inline-block;
+  vertical-align: middle;
+  margin: -4px 3px 0 0;
+  font-size: 20px;
+  color: #ffcc00;
+}
+/* line 55, ../sass/partials/_home.sass */
+.home .feed-item p.item-title {
+  font-size: 18px;
+  padding: 4px 3px;
+  color: #222831;
+}
+/* line 59, ../sass/partials/_home.sass */
+.home .feed-item p.owner {
+  display: inline-block;
+  vertical-align: middle;
+  width: 50%;
+  padding: 3px 3px;
+  color: #393e46;
+}
+/* line 64, ../sass/partials/_home.sass */
+.home .feed-item .published-container {
+  display: inline-block;
+  vertical-align: middle;
+  width: 48%;
+  text-align: right;
+}
+/* line 68, ../sass/partials/_home.sass */
+.home .feed-item .published-container p.published {
+  display: inline-block;
+  vertical-align: middle;
+  color: #393e46;
 }
