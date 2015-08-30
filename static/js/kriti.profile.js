@@ -12,19 +12,16 @@ angular.module('kriti.profile', [])
         .state('profile', {
           url: '/:id/',
           templateUrl: '/static/views/profile.html',
-          controller: 'ProfileCtrl',
-          resolve: {
-            items: function (ItemService) {
-              return ItemService.getAllItems();
-            }
-          }
+          controller: 'ProfileCtrl'
         });
     }
   ]);
 
 angular.module('kriti.profile')
-  .controller('ProfileCtrl', ['$scope', 'items',
-    function ($scope, items) {
-      $scope.items = items;
+  .controller('ProfileCtrl', ['$scope', 'ItemService',
+    function ($scope, ItemService) {
+      $scope.items = ItemService.getAllItems().then(function (items) {
+        return items;
+      });
     }
   ]);
