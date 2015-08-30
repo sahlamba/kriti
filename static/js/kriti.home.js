@@ -11,20 +11,17 @@ angular.module('kriti.home', [])
       $stateProvider
         .state('home', {
           url: '/',
-          templateUrl: 'static/views/home.html',
-          controller: 'HomeCtrl',
-          resolve: {
-            items: function (ItemService) {
-              return ItemService.getAllItems();
-            }
-          }
+          templateUrl: '/static/views/home.html',
+          controller: 'HomeCtrl'
         });
     }
   ]);
 
 angular.module('kriti.home')
-  .controller('HomeCtrl', ['$scope', 'items',
-    function ($scope, items) {
-      $scope.items = items;
+  .controller('HomeCtrl', ['$scope', 'ItemService',
+    function ($scope, ItemService) {
+      $scope.items = ItemService.getAllItems().then(function (items) {
+        return items;
+      });
     }
   ]);
