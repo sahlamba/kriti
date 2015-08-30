@@ -11,7 +11,7 @@ angular.module('kriti.profile', [])
       $stateProvider
         .state('profile', {
           url: '/:id/',
-          templateUrl: '/static/views/profile.html',
+          templateUrl: 'static/views/profile.html',
           controller: 'ProfileCtrl'
         });
     }
