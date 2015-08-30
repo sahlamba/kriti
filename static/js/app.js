@@ -2,7 +2,10 @@
 
 angular.module('kriti', [
     'ngSanitize',
+    'ngDialog',
+    'ngAnimate',
     'ui.router',
+    'angular-loading-bar',
     'kriti.main',
     'kriti.home',
     'kriti.profile'
