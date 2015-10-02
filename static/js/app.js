@@ -6,6 +6,7 @@ angular.module('kriti', [
     'ui.router',
     'angular-loading-bar',
     'textAngular',
+    'angularMoment',
     'kriti.main',
     'kriti.home',
     'kriti.profile'
