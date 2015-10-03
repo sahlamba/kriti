@@ -35,15 +35,15 @@
         </div>
       </div>
       <div class="user">
-        <a ui-sref="profile({id: user.enrolment})">
-          <p class="username" ng-bind="user.name"></p>
+        <a ui-sref="profile({id: current_user.enrolment})">
+          <p class="username" ng-bind="current_user.name"></p>
         </a>
         <div class="user-pic-container">
-          <img class="user-pic" ng-src="{~user.photo~}" />
+          <img class="user-pic" ng-src="{~current_user.photo~}" />
           <i class="fa fa-caret-down white inline-block-middle"></i>
           <div class="user-options">
             <ul>
-              <li><a ui-sref="profile({id: user.enrolment})"><i class="fi-layout"></i>Your Profile</a></li>
+              <li><a ui-sref="profile({id: current_user.enrolment})"><i class="fi-layout"></i>Your Profile</a></li>
               <li><a href="https://channeli.in"><i class="fi-info"></i>Channeli</a></li>
               <li><a href="https://channeli.in"><i class="fi-power"></i>Log Out</a></li>
             </ul>
