@@ -11,9 +11,10 @@ angular.module('kriti', [
     'kriti.home',
     'kriti.profile'
   ])
-  .config(['$interpolateProvider',
-    function ($interpolateProvider) {
+  .config(['$interpolateProvider', 'cfpLoadingBarProvider',
+    function ($interpolateProvider, cfpLoadingBarProvider) {
       $interpolateProvider.startSymbol('{~');
       $interpolateProvider.endSymbol('~}');
+      cfpLoadingBarProvider.includeSpinner = false;
     }
   ]);
