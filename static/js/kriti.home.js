@@ -20,8 +20,8 @@ angular.module('kriti.home', [])
 angular.module('kriti.home')
   .controller('HomeCtrl', ['$scope', 'ItemService',
     function ($scope, ItemService) {
-      $scope.items = ItemService.getAllItems().then(function (items) {
-        return items;
+      ItemService.getAllItems().then(function (data) {
+        $scope.items = data;
       });
     }
   ]);

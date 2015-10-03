@@ -17,11 +17,13 @@ angular.module('kriti.main')
           var defer = $q.defer();
 
           // Make http request here
-          setTimeout(function () {
-            defer.resolve({
-              'name': 'test'
+          $http.get(api.all_items)
+            .success(function (data) {
+              defer.resolve(data);
+            })
+            .error(function () {
+              console.log("Error in getting data.");
             });
-          }, 1000);
 
           return defer.promise;
         }
@@ -34,8 +36,8 @@ angular.module('kriti.main')
     function ($rootScope, $scope, $state) {
       $rootScope.appTitle = 'Kriti';
 
-      // The 'user' object contains info about the logged in user
-      $rootScope.user = {
+      // The 'current_user' object contains info about the logged in user
+      $rootScope.current_user = {
         'name': 'Mila Kunis',
         'photo': 'http://media.onsugar.com/files/2011/01/05/1/192/1922153/ea8f1ca1b21ed7a8_mila.jpg',
         'enrolment': '13117060'

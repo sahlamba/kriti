@@ -1,70 +1,71 @@
 .home
   background-color: $light-white
   padding: 25px 50px
-  .feed-item
-    position: relative
-    display: inline-block
-    background-color: #fff
-    width: 18%
-    max-width: 228px
-    margin: 1%
-    padding: 7px
-    border: 0
-    border-radius: 3px
-    +box-shadow-custom(0 1px 2px rgba(0,0,0,0.07))
-    .thumbnail
-      width: 100%
-      img
-        width: 100%
-    .more-details
+  .columns
+    +declare-columns()
+    .feed-item
       position: relative
+      display: inline-block
+      background-color: #fff
       width: 100%
-      padding: 3px 0 7px 0
-      border-bottom: 1px solid $light-white
-      .tag-container
+      margin-bottom: 20px
+      padding: 0
+      border: 0
+      +box-shadow-custom(0 1px 2px rgba(0,0,0,0.1))
+      .thumbnail
+        width: 100%
+        font-size: 0
+        img
+          width: 100%
+      .more-details
         position: relative
+        width: 100%
+        padding: 3px 0 7px 0
+        border-bottom: 1px solid $light-white
+        .tag-container
+          position: relative
+          width: 50%
+          border-right: 1px solid $light-white
+          text-align: center
+          +inline-block
+          .tag
+            padding: 1px 8px
+            border: 0
+            border-radius: 12px
+            background-color: $tag-art
+            color: #fff
+            +inline-block
+            p
+              font-size: 12px
+              font-weight: bold
+              line-height: 16px
+        .appreciations-container
+          position: relative
+          width: 48%
+          text-align: center
+          +inline-block
+          p.appreciations
+            +inline-block
+            font-size: 14px
+            color: $light-grey
+          i
+            +inline-block
+            margin: -4px 3px 0 0
+            font-size: 20px
+            color: $yellow
+      p.item-title
+        font-size: 18px
+        padding: 4px 3px
+        color: $dark-grey
+      p.owner
+        +inline-block
         width: 50%
-        border-right: 1px solid $light-white
-        text-align: center
-        +inline-block
-        .tag
-          padding: 1px 8px
-          border: 0
-          border-radius: 12px
-          background-color: $tag-art
-          color: #fff
-          +inline-block
-          p
-            font-size: 12px
-            font-weight: bold
-            line-height: 16px
-      .appreciations-container
-        position: relative
-        width: 48%
-        text-align: center
-        +inline-block
-        p.appreciations
-          +inline-block
-          font-size: 14px
-          color: $light-grey
-        i
-          +inline-block
-          margin: -4px 3px 0 0
-          font-size: 20px
-          color: $yellow
-    p.item-title
-      font-size: 18px
-      padding: 4px 3px
-      color: $dark-grey
-    p.owner
-      +inline-block
-      width: 50%
-      padding: 3px 3px
-      color: $light-grey
-    .published-container
-      +inline-block
-      width: 48%
-      text-align: right
-      p.published
-        +inline-block
+        padding: 3px 3px
         color: $light-grey
+      .published-container
+        +inline-block
+        width: 48%
+        text-align: right
+        p.published
+          +inline-block
+          color: $light-grey

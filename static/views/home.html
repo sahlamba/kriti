@@ -1,23 +1,25 @@
 <div class="home">
-  <div class="feed-item" ng-repeat="i in [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16]">
-    <div class="thumbnail">
-      <img src="http://www.urbansplatter.com/wp-content/uploads/2014/06/943189-mila-kunis.jpg" alt="Kunis"/>
-    </div>
-    <div class="more-details">
-      <div class="tag-container">
-        <div class="tag">
-          <p class="tag-type">painting</p>
+  <div class="columns">
+    <div class="feed-item toggle" ng-repeat="item in items">
+      <div class="thumbnail">
+        <img ng-src="{~ item.image ~}" alt=""/>
+      </div>
+      <!-- <div class="more-details">
+        <div class="tag-container">
+          <div class="tag">
+            <p class="tag-type" ng-bind="item.itemType"></p>
+          </div>
+        </div>
+        <div class="appreciations-container">
+          <i class="fi-star"></i>
+          <p class="appreciations" ng-bind="item.likes"></p>
         </div>
       </div>
-      <div class="appreciations-container">
-        <i class="fi-star"></i>
-        <p class="appreciations">500</p>
-      </div>
-    </div>
-    <p class="item-title">A piece of work!</p>
-    <p class="owner">by Mila Kunis</p>
-    <div class="published-container">
-      <p class="published">4 hours ago</p>
+      <p class="item-title" ng-bind="item.itemName"></p>
+      <p class="owner">by {~ item.owner ~}</p>
+      <div class="published-container">
+        <p class="published" am-time-ago="item.publishDate"></p>
+      </div> -->
     </div>
   </div>
 </div>
