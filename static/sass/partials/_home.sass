@@ -6,8 +6,9 @@
     .feed-item
       position: relative
       display: inline-block
-      background-color: #fff
+      background-color: #333
       width: 100%
+      overflow: hidden
       margin-bottom: 20px
       padding: 0
       border: 0
@@ -17,55 +18,53 @@
         font-size: 0
         img
           width: 100%
+      .tag-container
+        position: absolute
+        top: 15px
+        right: 15px
+        text-align: center
+        .tag
+          padding: 1px 8px
+          border: 0
+          border-radius: 12px
+          background-color: $tag-art
+          color: #fff
+          +box-shadow-custom(0 0 10px -3px rgba(0,0,0,0.5))
+          p
+            font-size: 12px
+            font-weight: bold
+            line-height: 18px
+            text-shadow: 0 1px 1px rgba(0,0,0,0.2)
       .more-details
-        position: relative
+        position: absolute
+        bottom: 0
+        left: 0
         width: 100%
-        padding: 3px 0 7px 0
-        border-bottom: 1px solid $light-white
-        .tag-container
-          position: relative
+        padding: 15px
+        +linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6))
+        p.item-title
+          font-size: 18px
+          font-weight: bold
+          padding: 4px 3px
+          color: #fff
+          text-shadow: 0 1px 1px #333
+        p.owner
           width: 50%
-          border-right: 1px solid $light-white
-          text-align: center
-          +inline-block
-          .tag
-            padding: 1px 8px
-            border: 0
-            border-radius: 12px
-            background-color: $tag-art
-            color: #fff
-            +inline-block
-            p
-              font-size: 12px
-              font-weight: bold
-              line-height: 16px
-        .appreciations-container
-          position: relative
-          width: 48%
-          text-align: center
-          +inline-block
-          p.appreciations
-            +inline-block
-            font-size: 14px
-            color: $light-grey
-          i
-            +inline-block
-            margin: -4px 3px 0 0
-            font-size: 20px
-            color: $yellow
-      p.item-title
-        font-size: 18px
-        padding: 4px 3px
-        color: $dark-grey
-      p.owner
-        +inline-block
-        width: 50%
-        padding: 3px 3px
-        color: $light-grey
-      .published-container
-        +inline-block
-        width: 48%
-        text-align: right
-        p.published
-          +inline-block
+          padding: 3px 3px
+          color: #fff
+          text-shadow: 0 1px 1px #333
+      .appreciations-container
+        position: absolute
+        bottom: 50px
+        right: 15px
+        width: auto
+        text-align: center
+        p.appreciations
+          font-size: 14px
           color: $light-grey
+        i
+          position: absolute
+          top: 0
+          right: 0
+          font-size: 60px
+          color: $yellow

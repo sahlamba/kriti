@@ -334,15 +334,16 @@ body {
   -webkit-column-gap: 20px;
   columns: 3 408px;
   column-gap: 20px;
-  width: 1264px;
+  max-width: 1264px;
   margin: 0 auto;
 }
 /* line 6, ../sass/partials/_home.sass */
 .home .columns .feed-item {
   position: relative;
   display: inline-block;
-  background-color: white;
+  background-color: #333333;
   width: 100%;
+  overflow: hidden;
   margin-bottom: 20px;
   padding: 0;
   border: 0;
@@ -350,94 +351,89 @@ body {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
-/* line 15, ../sass/partials/_home.sass */
+/* line 16, ../sass/partials/_home.sass */
 .home .columns .feed-item .thumbnail {
   width: 100%;
   font-size: 0;
 }
-/* line 18, ../sass/partials/_home.sass */
+/* line 19, ../sass/partials/_home.sass */
 .home .columns .feed-item .thumbnail img {
   width: 100%;
 }
-/* line 20, ../sass/partials/_home.sass */
-.home .columns .feed-item .more-details {
-  position: relative;
-  width: 100%;
-  padding: 3px 0 7px 0;
-  border-bottom: 1px solid #eeeeee;
-}
-/* line 25, ../sass/partials/_home.sass */
-.home .columns .feed-item .more-details .tag-container {
-  position: relative;
-  width: 50%;
-  border-right: 1px solid #eeeeee;
+/* line 21, ../sass/partials/_home.sass */
+.home .columns .feed-item .tag-container {
+  position: absolute;
+  top: 15px;
+  right: 15px;
   text-align: center;
-  display: inline-block;
-  vertical-align: middle;
 }
-/* line 31, ../sass/partials/_home.sass */
-.home .columns .feed-item .more-details .tag-container .tag {
+/* line 26, ../sass/partials/_home.sass */
+.home .columns .feed-item .tag-container .tag {
   padding: 1px 8px;
   border: 0;
   border-radius: 12px;
   background-color: #e84545;
   color: white;
-  display: inline-block;
-  vertical-align: middle;
+  box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.5);
+  -webkit-box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.5);
 }
-/* line 38, ../sass/partials/_home.sass */
-.home .columns .feed-item .more-details .tag-container .tag p {
+/* line 33, ../sass/partials/_home.sass */
+.home .columns .feed-item .tag-container .tag p {
   font-size: 12px;
   font-weight: bold;
-  line-height: 16px;
+  line-height: 18px;
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
-/* line 42, ../sass/partials/_home.sass */
-.home .columns .feed-item .more-details .appreciations-container {
-  position: relative;
-  width: 48%;
+/* line 38, ../sass/partials/_home.sass */
+.home .columns .feed-item .more-details {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px;
+  background: rgba(0, 0, 0, 0);
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.6)));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000',GradientType=0);
+}
+/* line 45, ../sass/partials/_home.sass */
+.home .columns .feed-item .more-details p.item-title {
+  font-size: 18px;
+  font-weight: bold;
+  padding: 4px 3px;
+  color: white;
+  text-shadow: 0 1px 1px #333333;
+}
+/* line 51, ../sass/partials/_home.sass */
+.home .columns .feed-item .more-details p.owner {
+  width: 50%;
+  padding: 3px 3px;
+  color: white;
+  text-shadow: 0 1px 1px #333333;
+}
+/* line 56, ../sass/partials/_home.sass */
+.home .columns .feed-item .appreciations-container {
+  position: absolute;
+  bottom: 50px;
+  right: 15px;
+  width: auto;
   text-align: center;
-  display: inline-block;
-  vertical-align: middle;
 }
-/* line 47, ../sass/partials/_home.sass */
-.home .columns .feed-item .more-details .appreciations-container p.appreciations {
-  display: inline-block;
-  vertical-align: middle;
+/* line 62, ../sass/partials/_home.sass */
+.home .columns .feed-item .appreciations-container p.appreciations {
   font-size: 14px;
   color: #393e46;
 }
-/* line 51, ../sass/partials/_home.sass */
-.home .columns .feed-item .more-details .appreciations-container i {
-  display: inline-block;
-  vertical-align: middle;
-  margin: -4px 3px 0 0;
-  font-size: 20px;
-  color: #ffcc00;
-}
-/* line 56, ../sass/partials/_home.sass */
-.home .columns .feed-item p.item-title {
-  font-size: 18px;
-  padding: 4px 3px;
-  color: #222831;
-}
-/* line 60, ../sass/partials/_home.sass */
-.home .columns .feed-item p.owner {
-  display: inline-block;
-  vertical-align: middle;
-  width: 50%;
-  padding: 3px 3px;
-  color: #393e46;
-}
 /* line 65, ../sass/partials/_home.sass */
-.home .columns .feed-item .published-container {
-  display: inline-block;
-  vertical-align: middle;
-  width: 48%;
-  text-align: right;
-}
-/* line 69, ../sass/partials/_home.sass */
-.home .columns .feed-item .published-container p.published {
-  display: inline-block;
-  vertical-align: middle;
-  color: #393e46;
+.home .columns .feed-item .appreciations-container i {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 60px;
+  color: #ffcc00;
 }
