@@ -19,7 +19,7 @@
     <div class="user-panel">
       <div class="search">
         <i class="fi-magnifying-glass"></i>
-        <input type="text" name="search" ng-model="search.query" placeholder="Search">
+        <input type="text" name="search" ng-model="search.query" placeholder="Search" ng-change="search.search()">
         <div class="search-options-container">
           <p ng-bind="search.in"></p>
           <i class="fa fa-caret-down"></i>
