@@ -18,10 +18,25 @@ angular.module('kriti.home', [])
   ]);
 
 angular.module('kriti.home')
-  .controller('HomeCtrl', ['$scope', 'ItemService',
-    function ($scope, ItemService) {
+  .controller('HomeCtrl', ['$scope', 'ItemService', 'ngDialog',
+    function ($scope, ItemService, ngDialog) {
       ItemService.getAllItems().then(function (data) {
         $scope.items = data;
       });
+
+      $scope.openItem = function (item) {
+        var options = {
+          template: 'static/views/parts/item.html',
+          className: 'ngdialog-theme-default',
+          scope: $scope,
+          data: item
+        };
+        ngDialog.open(options);
+      };
+
+      $scope.likeItem = function (id) {
+        ItemService.likeItem(id);
+      };
+
     }
   ]);
