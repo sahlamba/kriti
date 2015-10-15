@@ -1,4 +1,4 @@
-/* line 20, ../sass/partials/_base.sass */
+/* line 22, ../sass/partials/_base.sass */
 * {
   margin: 0;
   padding: 0;
@@ -11,7 +11,7 @@
   z-index: 0;
 }
 
-/* line 31, ../sass/partials/_base.sass */
+/* line 33, ../sass/partials/_base.sass */
 a, a:link, a:visited, a:hover, a:focus {
   text-decoration: inherit;
   color: inherit;
@@ -20,20 +20,37 @@ a, a:link, a:visited, a:hover, a:focus {
   font-family: inherit;
 }
 
-/* line 38, ../sass/partials/_base.sass */
+/* line 40, ../sass/partials/_base.sass */
 body {
   background-color: #eeeeee;
 }
 
-/* line 41, ../sass/partials/_base.sass */
+/* line 43, ../sass/partials/_base.sass */
 .white {
   color: white;
 }
 
-/* line 44, ../sass/partials/_base.sass */
+/* line 46, ../sass/partials/_base.sass */
 .inline-block-middle {
   display: inline-block;
   vertical-align: middle;
+}
+
+/* line 50, ../sass/partials/_base.sass */
+.pre-loader {
+  width: 100vw;
+  height: 100vh;
+  background: #2b3134;
+}
+/* line 54, ../sass/partials/_base.sass */
+.pre-loader img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  margin-left: -30px;
+  margin-top: -30px;
 }
 
 /* line 3, ../sass/partials/_header.sass */
@@ -341,33 +358,45 @@ body {
 .home .columns .feed-item {
   position: relative;
   display: inline-block;
-  background-color: #333333;
+  background-color: #2b3134;
   width: 100%;
-  overflow: hidden;
+  min-height: 150px;
   margin-bottom: 20px;
   padding: 0;
   border: 0;
+  cursor: pointer;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
-/* line 16, ../sass/partials/_home.sass */
+/* line 21, ../sass/partials/_home.sass */
+.home .columns .feed-item:hover .tag-container {
+  opacity: 1;
+}
+/* line 23, ../sass/partials/_home.sass */
+.home .columns .feed-item:hover .more-details {
+  opacity: 1;
+}
+/* line 25, ../sass/partials/_home.sass */
 .home .columns .feed-item .thumbnail {
   width: 100%;
   font-size: 0;
 }
-/* line 19, ../sass/partials/_home.sass */
+/* line 28, ../sass/partials/_home.sass */
 .home .columns .feed-item .thumbnail img {
   width: 100%;
 }
-/* line 21, ../sass/partials/_home.sass */
+/* line 30, ../sass/partials/_home.sass */
 .home .columns .feed-item .tag-container {
+  opacity: 0;
   position: absolute;
   top: 15px;
   right: 15px;
   text-align: center;
+  transition: all ease 300ms;
+  -webkit-transition: all ease 300ms;
 }
-/* line 26, ../sass/partials/_home.sass */
+/* line 37, ../sass/partials/_home.sass */
 .home .columns .feed-item .tag-container .tag {
   padding: 1px 8px;
   border: 0;
@@ -378,15 +407,16 @@ body {
   -webkit-box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.5);
   -moz-box-shadow: 0 0 10px -3px rgba(0, 0, 0, 0.5);
 }
-/* line 33, ../sass/partials/_home.sass */
+/* line 44, ../sass/partials/_home.sass */
 .home .columns .feed-item .tag-container .tag p {
   font-size: 12px;
   font-weight: bold;
   line-height: 18px;
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
 }
-/* line 38, ../sass/partials/_home.sass */
+/* line 49, ../sass/partials/_home.sass */
 .home .columns .feed-item .more-details {
+  opacity: 0;
   position: absolute;
   bottom: 0;
   left: 0;
@@ -400,36 +430,49 @@ body {
   background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
   background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000',GradientType=0);
+  transition: all ease 300ms;
+  -webkit-transition: all ease 300ms;
 }
-/* line 45, ../sass/partials/_home.sass */
+/* line 58, ../sass/partials/_home.sass */
 .home .columns .feed-item .more-details p.item-title {
+  width: 100%;
+  overflow: hidden;
   font-size: 18px;
   font-weight: bold;
   padding: 4px 3px;
   color: white;
   text-shadow: 0 1px 1px #333333;
+  text-transform: capitalize;
+  letter-spacing: 0.03em;
 }
-/* line 51, ../sass/partials/_home.sass */
+/* line 68, ../sass/partials/_home.sass */
 .home .columns .feed-item .more-details p.owner {
   width: 50%;
+  overflow: hidden;
   padding: 3px 3px;
   color: white;
   text-shadow: 0 1px 1px #333333;
+  text-transform: capitalize;
+  letter-spacing: 0.03em;
 }
-/* line 56, ../sass/partials/_home.sass */
+/* line 76, ../sass/partials/_home.sass */
 .home .columns .feed-item .appreciations-container {
   position: absolute;
-  bottom: 50px;
+  bottom: 5px;
   right: 15px;
-  width: auto;
+  width: 55px;
+  height: 60px;
   text-align: center;
 }
-/* line 62, ../sass/partials/_home.sass */
+/* line 83, ../sass/partials/_home.sass */
 .home .columns .feed-item .appreciations-container p.appreciations {
+  position: absolute;
+  bottom: 7px;
+  left: -18px;
   font-size: 14px;
   color: #393e46;
 }
-/* line 65, ../sass/partials/_home.sass */
+/* line 89, ../sass/partials/_home.sass */
 .home .columns .feed-item .appreciations-container i {
   position: absolute;
   top: 0;

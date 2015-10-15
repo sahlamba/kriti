@@ -6,23 +6,34 @@
     .feed-item
       position: relative
       display: inline-block
-      background-color: #333
+      background-color: $another-shade-of-grey
+      // background-image: url('/static/images/puff.svg')
+      // background-position: center center
+      // background-repeat: no-repeat
       width: 100%
-      overflow: hidden
+      min-height: 150px
       margin-bottom: 20px
       padding: 0
       border: 0
+      cursor: pointer
       +box-shadow-custom(0 1px 2px rgba(0,0,0,0.1))
+      &:hover
+        .tag-container
+          opacity: 1
+        .more-details
+          opacity: 1
       .thumbnail
         width: 100%
         font-size: 0
         img
           width: 100%
       .tag-container
+        opacity: 0
         position: absolute
         top: 15px
         right: 15px
         text-align: center
+        +transition(300ms)
         .tag
           padding: 1px 8px
           border: 0
@@ -36,30 +47,43 @@
             line-height: 18px
             text-shadow: 0 1px 1px rgba(0,0,0,0.2)
       .more-details
+        opacity: 0
         position: absolute
         bottom: 0
         left: 0
         width: 100%
         padding: 15px
         +linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6))
+        +transition(300ms)
         p.item-title
+          width: 100%
+          overflow: hidden
           font-size: 18px
           font-weight: bold
           padding: 4px 3px
           color: #fff
           text-shadow: 0 1px 1px #333
+          text-transform: capitalize
+          letter-spacing: 0.03em
         p.owner
           width: 50%
+          overflow: hidden
           padding: 3px 3px
           color: #fff
           text-shadow: 0 1px 1px #333
+          text-transform: capitalize
+          letter-spacing: 0.03em
       .appreciations-container
         position: absolute
-        bottom: 50px
+        bottom: 5px
         right: 15px
-        width: auto
+        width: 55px
+        height: 60px
         text-align: center
         p.appreciations
+          position: absolute
+          bottom: 7px
+          left: -18px
           font-size: 14px
           color: $light-grey
         i
