@@ -19,12 +19,17 @@
     <link rel="stylesheet" href="/static/js/kriti/libs/textAngular/dist/textAngular.css">
     <!-- css -->
     <link rel="stylesheet" href="/static/sass/kriti/master.css">
+    <link rel="stylesheet" href="/static/css/kriti/ng-animations.css">
   </head>
   <body class="ng-cloak" ng-cloak>
     <!-- header -->
     <div ng-include="'/static/angular_views/kriti/parts/header.html'"></div>
     <!-- ui-view -->
-    <div ui-view>Loading...</div>
+    <div ui-view>
+      <div class="pre-loader">
+        <img src="/static/images/kriti/puff-colored.svg" alt="Loading..." />
+      </div>
+    </div>
     <!-- scripts -->
     <script src="/static/js/kriti/libs/angular/angular.min.js" type="text/javascript"></script>
     <script src="/static/js/kriti/libs/angular-animate/angular-animate.min.js" type="text/javascript"></script>
@@ -40,6 +45,7 @@
     <!-- app -->
     <script src="/static/js/kriti/api.js" type="text/javascript"></script>
     <script src="/static/js/kriti/app.js" type="text/javascript"></script>
+    <script src="/static/js/kriti/kriti.services.js" type="text/javascript"></script>
     <script src="/static/js/kriti/kriti.main.js" type="text/javascript"></script>
     <script src="/static/js/kriti/kriti.home.js" type="text/javascript"></script>
     <script src="/static/js/kriti/kriti.profile.js" type="text/javascript"></script>

@@ -7,13 +7,15 @@ angular.module('kriti', [
     'angular-loading-bar',
     'textAngular',
     'angularMoment',
+    'kriti.services',
     'kriti.main',
     'kriti.home',
     'kriti.profile'
   ])
-  .config(['$interpolateProvider',
-    function ($interpolateProvider) {
+  .config(['$interpolateProvider', 'cfpLoadingBarProvider',
+    function ($interpolateProvider, cfpLoadingBarProvider) {
       $interpolateProvider.startSymbol('{~');
       $interpolateProvider.endSymbol('~}');
+      cfpLoadingBarProvider.includeSpinner = false;
     }
   ]);

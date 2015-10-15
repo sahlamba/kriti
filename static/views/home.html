@@ -1,25 +1,24 @@
 <div class="home">
   <div class="columns">
-    <div class="feed-item" ng-repeat="item in items">
+    <div class="feed-item toggle" ng-repeat="item in items" ng-click="openItem(item)">
       <div class="thumbnail">
         <img ng-src="{~ item.image ~}" alt=""/>
       </div>
-      <!-- <div class="more-details">
-        <div class="tag-container">
-          <div class="tag">
-            <p class="tag-type" ng-bind="item.itemType"></p>
-          </div>
-        </div>
-        <div class="appreciations-container">
-          <i class="fi-star"></i>
-          <p class="appreciations" ng-bind="item.likes"></p>
+      <div class="tag-container">
+        <div class="tag">
+          <p class="tag-type" ng-bind="item.itemType"></p>
         </div>
       </div>
-      <p class="item-title" ng-bind="item.itemName"></p>
-      <p class="owner">by {~ item.owner ~}</p>
-      <div class="published-container">
-        <p class="published" am-time-ago="item.publishDate"></p>
-      </div> -->
+      <div class="more-details">
+        <p class="item-title" ng-bind="item.itemName"></p>
+        <a ui-sref="profile({id: item.enrolmentNo})" ng-click="$event.stopPropagation()">
+          <p class="owner" ng-bind="item.owner"></p>
+        </a>
+      </div>
+      <div class="appreciations-container">
+        <i class="fa fa-star-o" ng-click="$event.stopPropagation(); likeItem(item.id)" ></i>
+        <p class="appreciations" ng-bind="item.likes"></p>
+      </div>
     </div>
   </div>
 </div>
