@@ -22,6 +22,9 @@ angular.module('kriti.services')
             });
 
           return defer.promise;
+        },
+        likeItem: function (id) {
+          console.log(id);
         }
       };
     }

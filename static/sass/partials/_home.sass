@@ -25,6 +25,7 @@
       .thumbnail
         width: 100%
         font-size: 0
+        cursor: pointer
         img
           width: 100%
       .tag-container
@@ -56,8 +57,7 @@
         +linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0.6))
         +transition(300ms)
         p.item-title
-          width: 100%
-          overflow: hidden
+          display: table
           font-size: 18px
           font-weight: bold
           padding: 4px 3px
@@ -65,30 +65,39 @@
           text-shadow: 0 1px 1px #333
           text-transform: capitalize
           letter-spacing: 0.03em
+          &:hover
+            text-decoration: underline
         p.owner
-          width: 50%
-          overflow: hidden
+          display: table
           padding: 3px 3px
           color: #fff
           text-shadow: 0 1px 1px #333
           text-transform: capitalize
           letter-spacing: 0.03em
+          &:hover
+            text-decoration: underline
       .appreciations-container
         position: absolute
         bottom: 5px
         right: 15px
-        width: 55px
-        height: 60px
+        width: 40px
+        height: 40px
         text-align: center
         p.appreciations
           position: absolute
           bottom: 7px
           left: -18px
           font-size: 14px
-          color: $light-grey
+          font-weight: bold
+          color: #fff
+          text-shadow: 0 0 7px #333
         i
           position: absolute
           top: 0
           right: 0
-          font-size: 60px
+          font-size: 35px
           color: $yellow
+          cursor: pointer
+          +transition(300ms)
+          &:hover
+            +transform(scale(1.2))

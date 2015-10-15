@@ -11,10 +11,12 @@
       </div>
       <div class="more-details">
         <p class="item-title" ng-bind="item.itemName"></p>
-        <p class="owner" ng-bind="item.owner"></p>
+        <a ui-sref="profile({id: item.enrolmentNo})" ng-click="$event.stopPropagation()">
+          <p class="owner" ng-bind="item.owner"></p>
+        </a>
       </div>
       <div class="appreciations-container">
-        <i class="fa fa-star-o"></i>
+        <i class="fa fa-star-o" ng-click="$event.stopPropagation(); likeItem(item.id)" ></i>
         <p class="appreciations" ng-bind="item.likes"></p>
       </div>
     </div>

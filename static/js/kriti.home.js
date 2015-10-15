@@ -34,5 +34,9 @@ angular.module('kriti.home')
         ngDialog.open(options);
       };
 
+      $scope.likeItem = function (id) {
+        ItemService.likeItem(id);
+      };
+
     }
   ]);
