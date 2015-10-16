@@ -23,10 +23,11 @@ $header-height: 51px
     max-height: 51px
     padding: 0 50px
     margin: 0 auto
-    .logo
+    .logo-container
       +inline-block
       margin-top: 5px
       img
+        vertical-align: top
         height: 40px
     .add-new
       position: relative
@@ -176,6 +177,7 @@ $header-height: 51px
             +box-shadow($dark)
             ul
               list-style-type: none
+              margin: 0
               li
                 a
                   display: block

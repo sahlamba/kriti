@@ -18,20 +18,21 @@ angular.module('kriti.home', [])
   ]);
 
 angular.module('kriti.home')
-  .controller('HomeCtrl', ['$scope', 'ItemService', 'ngDialog',
-    function ($scope, ItemService, ngDialog) {
+  .controller('HomeCtrl', ['$scope', 'ItemService', 'ngDialog', 'Lightbox',
+    function ($scope, ItemService, ngDialog, Lightbox) {
       ItemService.getAllItems().then(function (data) {
         $scope.items = data;
       });
 
       $scope.openItem = function (item) {
-        var options = {
-          template: '/static/views/parts/item.html',
-          className: 'ngdialog-theme-default',
-          scope: $scope,
-          data: item
-        };
-        ngDialog.open(options);
+        // var options = {
+        //   template: '/static/views/parts/item.html',
+        //   className: 'ngdialog-theme-default',
+        //   scope: $scope,
+        //   data: item
+        // };
+        // ngDialog.open(options);
+        Lightbox.openModal([item], 0);
       };
 
       $scope.likeItem = function (id) {

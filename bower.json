@@ -20,9 +20,12 @@
     "angular-moment": "~0.10.3",
     "angular-sanitize": "~1.4.3",
     "angular-ui-router": "~0.2.15",
-    "ngDialog": "~0.5.1"
+    "ngDialog": "~0.5.1",
+    "angular-bootstrap-lightbox": "~0.9.0",
+    "angular-bootstrap": "~0.14.2"
   },
   "resolutions": {
-    "angular": "1.4.5"
+    "angular": "1.4.5",
+    "angular-bootstrap": "^0.13.4"
   }
 }
