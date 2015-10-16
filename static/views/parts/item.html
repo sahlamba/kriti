@@ -1,7 +1,15 @@
-<div class="modal-body"
-    ng-swipe-left="Lightbox.nextImage()"
-    ng-swipe-right="Lightbox.prevImage()">
-  <div class="lightbox-image-container">
+<div class="modal-body">
+  <div class="lightbox-container">
     <img lightbox-src="{~Lightbox.imageUrl~}">
+    <div class="lightbox-panel">
+      <p class="item-title">{~Lightbox.images[0].itemName~}</p>
+      <div class="item-owner">
+
+      </div>
+      <div class="appreciations-container">
+        <i class="fa fa-star-o" ng-click="likeItem(Lightbox.images[0].id)" ></i>
+        <p class="appreciations" ng-bind="Lightbox.images[0].likes"></p>
+      </div>
+    </div>
   </div>
 </div>
