@@ -457,7 +457,11 @@ h1, h2, h3, h4, h5, h6, p {
   text-decoration: underline;
 }
 /* line 70, ../sass/partials/_home.sass */
-.home .columns .feed-item .more-details p.owner {
+.home .columns .feed-item .more-details a {
+  display: table;
+}
+/* line 72, ../sass/partials/_home.sass */
+.home .columns .feed-item .more-details a p.owner {
   display: table;
   padding: 3px 3px;
   color: white;
@@ -465,20 +469,20 @@ h1, h2, h3, h4, h5, h6, p {
   text-transform: capitalize;
   letter-spacing: 0.03em;
 }
-/* line 77, ../sass/partials/_home.sass */
-.home .columns .feed-item .more-details p.owner:hover {
+/* line 79, ../sass/partials/_home.sass */
+.home .columns .feed-item .more-details a p.owner:hover {
   text-decoration: underline;
 }
-/* line 79, ../sass/partials/_home.sass */
+/* line 1, ../sass/partials/_appreciations.sass */
 .home .columns .feed-item .appreciations-container {
   position: absolute;
   bottom: 5px;
-  right: 15px;
+  right: 10px;
   width: 40px;
   height: 40px;
   text-align: center;
 }
-/* line 86, ../sass/partials/_home.sass */
+/* line 8, ../sass/partials/_appreciations.sass */
 .home .columns .feed-item .appreciations-container p.appreciations {
   position: absolute;
   bottom: 7px;
@@ -488,10 +492,10 @@ h1, h2, h3, h4, h5, h6, p {
   color: white;
   text-shadow: 0 0 7px #333333;
 }
-/* line 94, ../sass/partials/_home.sass */
+/* line 16, ../sass/partials/_appreciations.sass */
 .home .columns .feed-item .appreciations-container i {
   position: absolute;
-  top: 0;
+  top: 2px;
   right: 0;
   font-size: 35px;
   color: #ffcc00;
@@ -499,16 +503,16 @@ h1, h2, h3, h4, h5, h6, p {
   transition: all ease 300ms;
   -webkit-transition: all ease 300ms;
 }
-/* line 102, ../sass/partials/_home.sass */
+/* line 24, ../sass/partials/_appreciations.sass */
 .home .columns .feed-item .appreciations-container i:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+  -webkit-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  transform: translateY(-3px);
 }
 
 /* line 1, ../sass/partials/_feed-lightbox.sass */
 .modal-backdrop.in {
-  opacity: 0.9;
+  opacity: 0.95;
 }
 
 /* line 3, ../sass/partials/_feed-lightbox.sass */
@@ -527,33 +531,43 @@ h1, h2, h3, h4, h5, h6, p {
 /* line 10, ../sass/partials/_feed-lightbox.sass */
 .modal-content .modal-body .lightbox-container {
   position: relative;
+  overflow: hidden;
+  width: 100%;
 }
-/* line 12, ../sass/partials/_feed-lightbox.sass */
-.modal-content .modal-body .lightbox-container img {
+/* line 14, ../sass/partials/_feed-lightbox.sass */
+.modal-content .modal-body .lightbox-container i.esc-msg {
+  color: #555555;
+  font-size: 11px;
+  margin-top: 3px;
+  margin-left: 10px;
+}
+/* line 19, ../sass/partials/_feed-lightbox.sass */
+.modal-content .modal-body .lightbox-container .lightbox-img {
+  position: relative;
+  width: 100%;
+  height: auto;
+}
+/* line 23, ../sass/partials/_feed-lightbox.sass */
+.modal-content .modal-body .lightbox-container .lightbox-img img {
   width: 100% !important;
   height: auto !important;
 }
-/* line 15, ../sass/partials/_feed-lightbox.sass */
+/* line 26, ../sass/partials/_feed-lightbox.sass */
 .modal-content .modal-body .lightbox-container .lightbox-panel {
-  position: absolute;
-  bottom: 0;
-  left: 0;
+  position: relative;
   width: 100%;
+  overflow: hidden;
+  background-color: black;
+}
+/* line 31, ../sass/partials/_feed-lightbox.sass */
+.modal-content .modal-body .lightbox-container .lightbox-panel .lightbox-panel-inner {
   overflow: hidden;
   padding: 15px;
   color: white;
-  background: rgba(0, 0, 0, 0);
-  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0)), color-stop(100%, rgba(0, 0, 0, 0.6)));
-  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
-  background: -o-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
-  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.6) 100%);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000',GradientType=0);
+  height: inherit;
 }
-/* line 24, ../sass/partials/_feed-lightbox.sass */
-.modal-content .modal-body .lightbox-container .lightbox-panel p.item-title {
-  display: table;
+/* line 36, ../sass/partials/_feed-lightbox.sass */
+.modal-content .modal-body .lightbox-container .lightbox-panel .lightbox-panel-inner p.item-title {
   font-size: 18px;
   font-weight: bold;
   padding: 4px 3px;
@@ -561,19 +575,55 @@ h1, h2, h3, h4, h5, h6, p {
   text-shadow: 0 1px 1px #333333;
   text-transform: capitalize;
   letter-spacing: 0.03em;
-  max-width: 60%;
+  max-width: 100%;
 }
-/* line 34, ../sass/partials/_feed-lightbox.sass */
-.modal-content .modal-body .lightbox-container .lightbox-panel .appreciations-container {
+/* line 45, ../sass/partials/_feed-lightbox.sass */
+.modal-content .modal-body .lightbox-container .lightbox-panel .lightbox-panel-inner p.item-desc {
+  margin-top: 20px;
+  padding: 0 3px;
+  letter-spacing: 0.03em;
+  max-width: 100%;
+  text-align: justify;
+}
+/* line 51, ../sass/partials/_feed-lightbox.sass */
+.modal-content .modal-body .lightbox-container .lightbox-panel .lightbox-panel-inner a.item-owner-link {
+  margin-top: 20px;
+  display: table;
+}
+/* line 54, ../sass/partials/_feed-lightbox.sass */
+.modal-content .modal-body .lightbox-container .lightbox-panel .lightbox-panel-inner a.item-owner-link .item-owner {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 56, ../sass/partials/_feed-lightbox.sass */
+.modal-content .modal-body .lightbox-container .lightbox-panel .lightbox-panel-inner a.item-owner-link .item-owner img {
+  display: inline-block;
+  vertical-align: middle;
+  height: 36px;
+  border-radius: 50%;
+}
+/* line 60, ../sass/partials/_feed-lightbox.sass */
+.modal-content .modal-body .lightbox-container .lightbox-panel .lightbox-panel-inner a.item-owner-link .item-owner p {
+  display: inline-block;
+  vertical-align: middle;
+  color: #cccccc;
+  margin-left: 10px;
+}
+/* line 64, ../sass/partials/_feed-lightbox.sass */
+.modal-content .modal-body .lightbox-container .lightbox-panel .lightbox-panel-inner a.item-owner-link .item-owner p:hover {
+  text-decoration: underline;
+}
+/* line 1, ../sass/partials/_appreciations.sass */
+.modal-content .modal-body .lightbox-container .lightbox-panel .lightbox-panel-inner .appreciations-container {
   position: absolute;
   bottom: 5px;
-  right: 15px;
+  right: 10px;
   width: 40px;
   height: 40px;
   text-align: center;
 }
-/* line 41, ../sass/partials/_feed-lightbox.sass */
-.modal-content .modal-body .lightbox-container .lightbox-panel .appreciations-container p.appreciations {
+/* line 8, ../sass/partials/_appreciations.sass */
+.modal-content .modal-body .lightbox-container .lightbox-panel .lightbox-panel-inner .appreciations-container p.appreciations {
   position: absolute;
   bottom: 7px;
   left: -18px;
@@ -582,10 +632,10 @@ h1, h2, h3, h4, h5, h6, p {
   color: white;
   text-shadow: 0 0 7px #333333;
 }
-/* line 49, ../sass/partials/_feed-lightbox.sass */
-.modal-content .modal-body .lightbox-container .lightbox-panel .appreciations-container i {
+/* line 16, ../sass/partials/_appreciations.sass */
+.modal-content .modal-body .lightbox-container .lightbox-panel .lightbox-panel-inner .appreciations-container i {
   position: absolute;
-  top: 0;
+  top: 2px;
   right: 0;
   font-size: 35px;
   color: #ffcc00;
@@ -593,9 +643,9 @@ h1, h2, h3, h4, h5, h6, p {
   transition: all ease 300ms;
   -webkit-transition: all ease 300ms;
 }
-/* line 57, ../sass/partials/_feed-lightbox.sass */
-.modal-content .modal-body .lightbox-container .lightbox-panel .appreciations-container i:hover {
-  -webkit-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  transform: scale(1.2);
+/* line 24, ../sass/partials/_appreciations.sass */
+.modal-content .modal-body .lightbox-container .lightbox-panel .lightbox-panel-inner .appreciations-container i:hover {
+  -webkit-transform: translateY(-3px);
+  -ms-transform: translateY(-3px);
+  transform: translateY(-3px);
 }

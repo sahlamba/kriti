@@ -1,15 +1,28 @@
 <div class="modal-body">
   <div class="lightbox-container">
-    <img lightbox-src="{~Lightbox.imageUrl~}">
+    <div class="lightbox-img">
+      <img lightbox-src="{~Lightbox.imageUrl~}">
+    </div>
     <div class="lightbox-panel">
-      <p class="item-title">{~Lightbox.images[0].itemName~}</p>
-      <div class="item-owner">
-
-      </div>
-      <div class="appreciations-container">
-        <i class="fa fa-star-o" ng-click="likeItem(Lightbox.images[0].id)" ></i>
-        <p class="appreciations" ng-bind="Lightbox.images[0].likes"></p>
+      <div class="lightbox-panel-inner">
+        <p class="item-title">{~Lightbox.images[0].itemName~}</p>
+        <p class="item-desc">
+          <!-- {~Lightbox.images[0].description~} -->
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        </p>
+        <a class="item-owner-link" ui-sref="profile({id: Lightbox.images[0].owner.enrolment})">
+          <div class="item-owner">
+            <!-- use owner's pic and delete this comment -->
+            <img src="http://media.onsugar.com/files/2011/01/05/1/192/1922153/ea8f1ca1b21ed7a8_mila.jpg" alt="" />
+              <p>{~Lightbox.images[0].owner~}</p>
+          </div>
+        </a>
+        <div class="appreciations-container">
+          <i class="fa fa-star-o" ng-click="likeItem(Lightbox.images[0].id)" ></i>
+          <p class="appreciations" ng-bind="Lightbox.images[0].likes"></p>
+        </div>
       </div>
     </div>
+    <i class="esc-msg">Press Esc to close</i>
   </div>
 </div>

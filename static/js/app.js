@@ -8,6 +8,7 @@ angular.module('kriti', [
     'textAngular',
     'angularMoment',
     'bootstrapLightbox',
+    'sun.scrollable',
     'kriti.services',
     'kriti.main',
     'kriti.home',
