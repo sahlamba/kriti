@@ -23,7 +23,7 @@ angular.module('kriti', [
   ])
   .config(['LightboxProvider',
     function (LightboxProvider) {
-      LightboxProvider.templateUrl = '/static/views/parts/item.html';
+      LightboxProvider.templateUrl = '/static/angular_views/kriti/parts/item.html';
       LightboxProvider.getImageUrl = function (item) {
         return item.image; // Return image URL to feed lightbox
       };
