@@ -53,7 +53,6 @@ body
 .pre-loader
   width: 100vw
   height: 100vh
-  // background: $another-shade-of-grey
   img
     position: absolute
     top: 50%
@@ -66,6 +65,23 @@ body
 h1, h2, h3, h4, h5, h6, p
   margin: 0
 
+
+// Overrides
 #loading-bar
   .bar
     background: $orange
+  .peg
+    -moz-box-shadow: $orange 1px 0 6px 1px
+    -ms-box-shadow: $orange 1px 0 6px 1px
+    -webkit-box-shadow: $orange 1px 0 6px 1px
+    box-shadow: $orange 1px 0 6px 1px
+
+.ngdialog.ngdialog-theme-default
+  .ngdialog-content
+    border-radius: 1px
+    background: #fff
+    background-color: #fff
+    font-family: inherit
+    font-size: 14px
+    line-height: normal
+    padding: 20px

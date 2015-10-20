@@ -4,11 +4,11 @@
       <div class="feed-thumbnail">
         <img ng-src="{~ item.image ~}" alt=""/>
       </div>
-      <div class="tag-container">
+      <!-- <div class="tag-container">
         <div class="tag">
           <p class="tag-type" ng-bind="item.itemType"></p>
         </div>
-      </div>
+      </div> -->
       <div class="more-details">
         <p class="item-title" ng-bind="item.itemName"></p>
         <a ui-sref="profile({id: item.enrolmentNo})" ng-click="$event.stopPropagation()">

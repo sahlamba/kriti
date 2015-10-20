@@ -67,6 +67,17 @@ angular.module('kriti.main')
             scope: $scope
           });
         },
+        openForm: function (theOne) {
+          // Open requested form dialog
+          var temp = '/static/views/parts/' + theOne + '.html';
+          ngDialog.close('ngDialog1');
+          ngDialog.open({
+            template: temp,
+            className: 'ngdialog-theme-default',
+            overlay: true,
+            scope: $scope
+          });
+        },
         validateInputs: function () {
           if (true) { // Check input field validations
             return true;

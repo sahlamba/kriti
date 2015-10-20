@@ -1,1 +1,25 @@
-<h1>Add new item</h1>
+<div class="add-dialog">
+  <div class="multimedia" ng-click="newItem.openForm('media')">
+    <div class="inner">
+      <div class="icons">
+        <i class="fi-photo"></i>
+        <i class="fi-camera"></i>
+        <i class="fi-video"></i>
+      </div>
+      <p class="option-name">Media</p>
+      <p class="formats">Sketch, artwork, graphics, photography</p>
+    </div>
+  </div>
+  <div class="separator"></div>
+  <div class="text" ng-click="newItem.openForm('text')">
+    <div class="inner">
+      <div class="icons">
+        <i class="fa fa-file-text-o"></i>
+        <i class="fa fa-file-o"></i>
+        <i class="fa fa-file-pdf-o"></i>
+      </div>
+      <p class="option-name">Text</p>
+      <p class="formats">Article, story, poem</p>
+    </div>
+    </div>
+</div>

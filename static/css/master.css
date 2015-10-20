@@ -42,7 +42,7 @@ body {
   width: 100vw;
   height: 100vh;
 }
-/* line 57, ../sass/partials/_base.sass */
+/* line 56, ../sass/partials/_base.sass */
 .pre-loader img {
   position: absolute;
   top: 50%;
@@ -53,14 +53,32 @@ body {
   margin-top: -30px;
 }
 
-/* line 66, ../sass/partials/_base.sass */
+/* line 65, ../sass/partials/_base.sass */
 h1, h2, h3, h4, h5, h6, p {
   margin: 0;
 }
 
-/* line 70, ../sass/partials/_base.sass */
+/* line 71, ../sass/partials/_base.sass */
 #loading-bar .bar {
   background: #de703c;
+}
+/* line 73, ../sass/partials/_base.sass */
+#loading-bar .peg {
+  -moz-box-shadow: #de703c 1px 0 6px 1px;
+  -ms-box-shadow: #de703c 1px 0 6px 1px;
+  -webkit-box-shadow: #de703c 1px 0 6px 1px;
+  box-shadow: #de703c 1px 0 6px 1px;
+}
+
+/* line 80, ../sass/partials/_base.sass */
+.ngdialog.ngdialog-theme-default .ngdialog-content {
+  border-radius: 1px;
+  background: white;
+  background-color: white;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: normal;
+  padding: 20px;
 }
 
 /* line 3, ../sass/partials/_header.sass */
@@ -120,20 +138,25 @@ h1, h2, h3, h4, h5, h6, p {
   cursor: pointer;
 }
 /* line 42, ../sass/partials/_header.sass */
+.header .inner .add-new:hover {
+  background-color: #de703c;
+  border-color: #de703c;
+}
+/* line 45, ../sass/partials/_header.sass */
 .header .inner .add-new p {
   display: inline-block;
   vertical-align: middle;
   font-size: 16px;
   font-weight: bold;
 }
-/* line 46, ../sass/partials/_header.sass */
+/* line 49, ../sass/partials/_header.sass */
 .header .inner .add-new i {
   display: inline-block;
   vertical-align: middle;
   font-size: 20px;
   margin-right: 12px;
 }
-/* line 50, ../sass/partials/_header.sass */
+/* line 53, ../sass/partials/_header.sass */
 .header .inner .add-new .add-new-options {
   display: none;
   position: absolute;
@@ -146,32 +169,32 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-box-shadow: 0 3px 6px -2px #1a2634;
   -moz-box-shadow: 0 3px 6px -2px #1a2634;
 }
-/* line 59, ../sass/partials/_header.sass */
+/* line 62, ../sass/partials/_header.sass */
 .header .inner .add-new .add-new-options ul {
   list-style-type: none;
 }
-/* line 61, ../sass/partials/_header.sass */
+/* line 64, ../sass/partials/_header.sass */
 .header .inner .add-new .add-new-options ul li {
   color: white;
   padding: 12px;
 }
-/* line 64, ../sass/partials/_header.sass */
+/* line 67, ../sass/partials/_header.sass */
 .header .inner .add-new .add-new-options ul li:hover {
   cursor: pointer;
   background-color: #1a2634;
 }
-/* line 67, ../sass/partials/_header.sass */
+/* line 70, ../sass/partials/_header.sass */
 .header .inner .user-panel {
   float: right;
   display: inline-block;
   vertical-align: middle;
 }
-/* line 70, ../sass/partials/_header.sass */
+/* line 73, ../sass/partials/_header.sass */
 .header .inner .user-panel .search {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 72, ../sass/partials/_header.sass */
+/* line 75, ../sass/partials/_header.sass */
 .header .inner .user-panel .search i {
   font-size: 22px;
   margin: 6px 5px 0 0;
@@ -179,7 +202,7 @@ h1, h2, h3, h4, h5, h6, p {
   display: inline-block;
   vertical-align: top;
 }
-/* line 78, ../sass/partials/_header.sass */
+/* line 81, ../sass/partials/_header.sass */
 .header .inner .user-panel .search input {
   font-size: 14px;
   line-height: 27px;
@@ -190,7 +213,7 @@ h1, h2, h3, h4, h5, h6, p {
   border: 0;
   border-radius: 14px;
 }
-/* line 87, ../sass/partials/_header.sass */
+/* line 90, ../sass/partials/_header.sass */
 .header .inner .user-panel .search .search-options-container {
   position: relative;
   display: inline-block;
@@ -204,22 +227,22 @@ h1, h2, h3, h4, h5, h6, p {
   border-radius: 12px;
   cursor: pointer;
 }
-/* line 99, ../sass/partials/_header.sass */
+/* line 102, ../sass/partials/_header.sass */
 .header .inner .user-panel .search .search-options-container:hover .search-options {
   display: block;
 }
-/* line 101, ../sass/partials/_header.sass */
+/* line 104, ../sass/partials/_header.sass */
 .header .inner .user-panel .search .search-options-container:hover > p {
   text-decoration: underline;
 }
-/* line 103, ../sass/partials/_header.sass */
+/* line 106, ../sass/partials/_header.sass */
 .header .inner .user-panel .search .search-options-container p {
   display: inline-block;
   vertical-align: middle;
   text-transform: capitalize;
   margin-left: 6px;
 }
-/* line 107, ../sass/partials/_header.sass */
+/* line 110, ../sass/partials/_header.sass */
 .header .inner .user-panel .search .search-options-container i {
   display: inline-block;
   vertical-align: middle;
@@ -229,7 +252,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin-right: 5px;
   z-index: 10;
 }
-/* line 114, ../sass/partials/_header.sass */
+/* line 117, ../sass/partials/_header.sass */
 .header .inner .user-panel .search .search-options-container .search-options {
   display: none;
   position: absolute;
@@ -247,27 +270,27 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-box-shadow: 0 3px 6px -2px #1a2634;
   -moz-box-shadow: 0 3px 6px -2px #1a2634;
 }
-/* line 128, ../sass/partials/_header.sass */
+/* line 131, ../sass/partials/_header.sass */
 .header .inner .user-panel .search .search-options-container .search-options ul {
   list-style-type: none;
 }
-/* line 130, ../sass/partials/_header.sass */
+/* line 133, ../sass/partials/_header.sass */
 .header .inner .user-panel .search .search-options-container .search-options ul li {
   padding: 8px;
   background-color: #405e9f;
   cursor: auto;
 }
-/* line 134, ../sass/partials/_header.sass */
+/* line 137, ../sass/partials/_header.sass */
 .header .inner .user-panel .search .search-options-container .search-options ul li:hover {
   background-color: #1a2634;
 }
-/* line 136, ../sass/partials/_header.sass */
+/* line 139, ../sass/partials/_header.sass */
 .header .inner .user-panel .search .search-options-container .search-options ul li p {
   display: inline-block;
   vertical-align: middle;
   text-transform: capitalize;
 }
-/* line 139, ../sass/partials/_header.sass */
+/* line 142, ../sass/partials/_header.sass */
 .header .inner .user-panel .search .search-options-container .search-options ul li input {
   display: inline-block;
   vertical-align: middle;
@@ -275,24 +298,24 @@ h1, h2, h3, h4, h5, h6, p {
   width: 12px;
   margin: -3px 5px 0 0;
 }
-/* line 144, ../sass/partials/_header.sass */
+/* line 147, ../sass/partials/_header.sass */
 .header .inner .user-panel .user {
   position: relative;
   display: inline-block;
   margin-left: 100px;
 }
-/* line 149, ../sass/partials/_header.sass */
+/* line 152, ../sass/partials/_header.sass */
 .header .inner .user-panel .user a p.username {
   display: inline-block;
   vertical-align: middle;
   color: white;
 }
-/* line 152, ../sass/partials/_header.sass */
+/* line 155, ../sass/partials/_header.sass */
 .header .inner .user-panel .user a p.username:hover {
   cursor: pointer;
   text-decoration: underline;
 }
-/* line 155, ../sass/partials/_header.sass */
+/* line 158, ../sass/partials/_header.sass */
 .header .inner .user-panel .user .user-pic-container {
   position: relative;
   display: inline-block;
@@ -300,7 +323,7 @@ h1, h2, h3, h4, h5, h6, p {
   margin-left: 15px;
   cursor: pointer;
 }
-/* line 160, ../sass/partials/_header.sass */
+/* line 163, ../sass/partials/_header.sass */
 .header .inner .user-panel .user .user-pic-container img.user-pic {
   display: inline-block;
   vertical-align: middle;
@@ -308,11 +331,11 @@ h1, h2, h3, h4, h5, h6, p {
   border: 3px solid #203e5f;
   border-radius: 50%;
 }
-/* line 165, ../sass/partials/_header.sass */
+/* line 168, ../sass/partials/_header.sass */
 .header .inner .user-panel .user .user-pic-container:hover .user-options {
   display: block;
 }
-/* line 167, ../sass/partials/_header.sass */
+/* line 170, ../sass/partials/_header.sass */
 .header .inner .user-panel .user .user-pic-container .user-options {
   display: none;
   position: absolute;
@@ -327,25 +350,128 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-box-shadow: 0 3px 6px -2px #1a2634;
   -moz-box-shadow: 0 3px 6px -2px #1a2634;
 }
-/* line 178, ../sass/partials/_header.sass */
+/* line 181, ../sass/partials/_header.sass */
 .header .inner .user-panel .user .user-pic-container .user-options ul {
   list-style-type: none;
   margin: 0;
 }
-/* line 182, ../sass/partials/_header.sass */
+/* line 185, ../sass/partials/_header.sass */
 .header .inner .user-panel .user .user-pic-container .user-options ul li a {
   display: block;
   color: white;
   padding: 12px;
 }
-/* line 186, ../sass/partials/_header.sass */
+/* line 189, ../sass/partials/_header.sass */
 .header .inner .user-panel .user .user-pic-container .user-options ul li a:hover {
   cursor: pointer;
   background-color: #1a2634;
 }
-/* line 189, ../sass/partials/_header.sass */
+/* line 192, ../sass/partials/_header.sass */
 .header .inner .user-panel .user .user-pic-container .user-options ul li a i {
   margin-right: 12px;
+}
+
+/* line 1, ../sass/partials/_add-item.sass */
+.add-dialog {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+/* line 5, ../sass/partials/_add-item.sass */
+.add-dialog .multimedia {
+  position: relative;
+  width: 49%;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+/* line 10, ../sass/partials/_add-item.sass */
+.add-dialog .multimedia * {
+  color: #1a2634;
+}
+/* line 13, ../sass/partials/_add-item.sass */
+.add-dialog .multimedia:hover * {
+  color: #de703c;
+}
+/* line 15, ../sass/partials/_add-item.sass */
+.add-dialog .multimedia .inner {
+  padding-right: 30px;
+}
+/* line 17, ../sass/partials/_add-item.sass */
+.add-dialog .multimedia .inner .icons {
+  position: relative;
+  text-align: center;
+}
+/* line 20, ../sass/partials/_add-item.sass */
+.add-dialog .multimedia .inner .icons i {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 3px;
+  font-size: 40px;
+}
+/* line 24, ../sass/partials/_add-item.sass */
+.add-dialog .multimedia .inner p.option-name {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 6px;
+}
+/* line 28, ../sass/partials/_add-item.sass */
+.add-dialog .multimedia .inner p.formats {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 5px;
+}
+/* line 32, ../sass/partials/_add-item.sass */
+.add-dialog .separator {
+  width: 1%;
+  height: 120px;
+  border-left: 2px solid #1a2634;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 37, ../sass/partials/_add-item.sass */
+.add-dialog .text {
+  position: relative;
+  width: 48%;
+  display: inline-block;
+  vertical-align: middle;
+  cursor: pointer;
+}
+/* line 42, ../sass/partials/_add-item.sass */
+.add-dialog .text * {
+  color: #1a2634;
+}
+/* line 45, ../sass/partials/_add-item.sass */
+.add-dialog .text:hover * {
+  color: #de703c;
+}
+/* line 47, ../sass/partials/_add-item.sass */
+.add-dialog .text .inner {
+  padding-left: 30px;
+}
+/* line 49, ../sass/partials/_add-item.sass */
+.add-dialog .text .inner .icons {
+  position: relative;
+  text-align: center;
+}
+/* line 52, ../sass/partials/_add-item.sass */
+.add-dialog .text .inner .icons i {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 3px;
+  font-size: 40px;
+}
+/* line 56, ../sass/partials/_add-item.sass */
+.add-dialog .text .inner p.option-name {
+  font-size: 20px;
+  text-align: center;
+  margin-top: 6px;
+}
+/* line 60, ../sass/partials/_add-item.sass */
+.add-dialog .text .inner p.formats {
+  font-size: 12px;
+  text-align: center;
+  margin-top: 5px;
 }
 
 /* line 1, ../sass/partials/_home.sass */
