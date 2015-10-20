@@ -20,8 +20,5 @@ angular.module('kriti.profile', [])
 angular.module('kriti.profile')
   .controller('ProfileCtrl', ['$scope', 'ItemService',
     function ($scope, ItemService) {
-      $scope.items = ItemService.getAllItems().then(function (items) {
-        return items;
-      });
     }
   ]);

@@ -1,4 +1,4 @@
-$header-height: 51px
+$header-height: 53px
 
 .header-cover-up
   position: relative
@@ -13,6 +13,7 @@ $header-height: 51px
   width: 100%
   height: $header-height
   z-index: 900
+  padding-top: 2px
   +box-shadow-custom(0 1px 3px rgba(1, 1, 1, 0.5))
   *
     z-index: 900
@@ -25,17 +26,18 @@ $header-height: 51px
     margin: 0 auto
     .logo-container
       +inline-block
-      margin-top: 5px
+      margin-top: 8px
       img
         vertical-align: top
         height: 40px
     .add-new
       position: relative
       +inline-block
+      margin-top: 2px
       margin-left: 15px
       color: #fff
-      background-color: $aqua
-      padding: 12px
+      padding: 3px 12px
+      border: 2px solid #fff
       cursor: pointer
       p
         +inline-block
@@ -45,8 +47,6 @@ $header-height: 51px
         +inline-block
         font-size: 20px
         margin-right: 12px
-      &:hover .add-new-options
-        display: block
       .add-new-options
         display: none
         position: absolute

@@ -2,9 +2,9 @@
 
 // Contains services
 
-
 angular.module('kriti.services', []);
 
+// Item related services
 angular.module('kriti.services')
   .factory('ItemService', ['$q', '$http',
     function ($q, $http) {
@@ -36,6 +36,7 @@ angular.module('kriti.services')
     }
   ]);
 
+// Search related services
 angular.module('kriti.services')
   .factory('SearchService', ['$q', '$http',
     function ($q, $http) {
@@ -59,6 +60,7 @@ angular.module('kriti.services')
     }
   ]);
 
+// Notification System
 angular.module('kriti.services')
   .factory('NotificationSys', function () {
     return {

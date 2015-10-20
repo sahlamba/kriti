@@ -1,6 +1,4 @@
-/*
- * API URLs
- */
+/* API URLs */
 
 'use strict';
 
