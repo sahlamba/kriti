@@ -18,19 +18,23 @@ angular.module('kriti.home', [])
   ]);
 
 angular.module('kriti.home')
-  .controller('HomeCtrl', ['$scope', '$rootScope', 'ItemService', 'ngDialog', 'Lightbox',
-    function ($scope, $rootScope, ItemService, ngDialog, Lightbox) {
-      ItemService.getAllItems().then(function (data) {
-        $scope.items = data;
-      });
+  .controller('HomeCtrl', ['$scope', '$rootScope', 'ItemService', 'NotificationSys', 'ngDialog', 'Lightbox',
+    function ($scope, $rootScope, ItemService, NotificationSys, ngDialog, Lightbox) {
+
+      $scope.getInitialData = function () {
+        ItemService.getAllItems().then(function (data) {
+          $scope.items = data;
+          NotificationSys.notify("Initial data transfer complete.", "success");
+        });
+      };
 
       $scope.openItem = function (item) {
         Lightbox.openModal([item], 0);
       };
 
       // Put in rootScope to use in lightbox also
-      $rootScope.likeItem = function (id) {
-        ItemService.likeItem(id);
+      $rootScope.appreciateItem = function (id) {
+        ItemService.appreciateItem(id);
       };
 
     }

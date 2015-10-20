@@ -1,4 +1,4 @@
-<div class="home">
+<div class="home" ng-init="getInitialData()">
   <div class="columns">
     <div class="feed-item toggle" ng-repeat="item in items" ng-click="openItem(item)">
       <div class="feed-thumbnail">
@@ -16,7 +16,7 @@
         </a>
       </div>
       <div class="appreciations-container">
-        <i class="fa fa-star-o" ng-click="$event.stopPropagation(); likeItem(item.id)" ></i>
+        <i class="fa fa-star-o" ng-click="$event.stopPropagation(); appreciateItem(item.id)" ></i>
         <p class="appreciations" ng-bind="item.likes"></p>
       </div>
     </div>

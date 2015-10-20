@@ -23,8 +23,14 @@ angular.module('kriti.services')
 
           return defer.promise;
         },
-        likeItem: function (id) {
+        appreciateItem: function (id) {
           console.log(id);
+        },
+        addItem: function (itemObject) {
+          // body...
+        },
+        deleteItem: function (id) {
+          // body...
         }
       };
     }
@@ -52,3 +58,18 @@ angular.module('kriti.services')
       };
     }
   ]);
+
+angular.module('kriti.services')
+  .factory('NotificationSys', function () {
+    return {
+      notify: function (msg, typeOfNoti) {
+        Messenger().post({
+          message: msg,
+          hideAfter: 5, // seconds
+          hideOnNavigate: true,
+          showCloseButton: true,
+          type: typeOfNoti
+        });
+      }
+    };
+  });

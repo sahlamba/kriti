@@ -30,4 +30,10 @@ angular.module('kriti', [
       LightboxProvider.getImageCaption = function (item) {
         return item.itemName;
       };
-  }]);
+  }])
+  .run(function () {
+    Messenger.options = {
+      extraClasses: 'messenger-fixed messenger-on-top messenger-on-right',
+      theme: 'air'
+    };
+  });
