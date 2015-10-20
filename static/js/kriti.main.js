@@ -12,7 +12,7 @@ angular.module('kriti.main', [])
 angular.module('kriti.main')
   .controller('MainCtrl', ['$rootScope', '$scope', '$state', 'SearchService', 'ngDialog',
     function ($rootScope, $scope, $state, SearchService, ngDialog) {
-      $rootScope.appTitle = 'Kriti';
+      $rootScope.appTitle = 'Kriti'; // Bakchodi
 
       // The 'current_user' object contains info about the logged in user
       $rootScope.current_user = {
@@ -21,8 +21,10 @@ angular.module('kriti.main')
         enrolment: '13117060'
       };
 
+      // Search object contains query, results, request function
       $scope.search = {
         query: null,
+        results: [], // Array or object, depends on Backend API
         in: 'all',
         options: ['all', 'article', 'poem', 'user'],
         search: function () {
@@ -32,17 +34,65 @@ angular.module('kriti.main')
           } else {
             console.log('Searching...');
             SearchService.search(this.query).then(function (results) {
-              var options = {
+              $scope.search.results = results;
+              ngDialog.open({
                 template: '/static/views/parts/search.html',
                 className: 'ngdialog-theme-default',
                 overlay: false,
                 scope: $scope,
                 data: results
-              };
-              ngDialog.open(options);
+              });
             });
           }
         }
       };
+
+      // newItem contains empty item object and upload item related functions
+      $scope.newItem = {
+        item: {
+          title: null,
+          owner: $rootScope.current_user,
+          description: null, // Max 160 characters
+          appreciations: 0,
+          appreciated: false,
+          category: null,
+          files: [], // Array of uploaded file links
+        },
+        openDialog: function () {
+          // Opens dialog
+          ngDialog.open({
+            template: '/static/views/parts/add.html',
+            className: 'ngdialog-theme-default',
+            overlay: true,
+            scope: $scope
+          });
+        },
+        openForm: function (theOne) {
+          // Open requested form dialog
+          var temp = '/static/views/parts/' + theOne + '.html';
+          ngDialog.close('ngDialog1');
+          ngDialog.open({
+            template: temp,
+            className: 'ngdialog-theme-default',
+            overlay: true,
+            scope: $scope
+          });
+        },
+        validateInputs: function () {
+          if (true) { // Check input field validations
+            return true;
+          } else {
+            return false;
+          }
+        },
+        addItem: function () {
+          if(this.validateInputs()) {
+            // Continue
+          } else {
+            // Throw up error
+          }
+        }
+      };
+
     }
   ]);

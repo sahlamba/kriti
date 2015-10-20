@@ -1,0 +1,66 @@
+.modal-backdrop.in
+  opacity: 0.95
+.modal-content
+  border: 0
+  border-radius: 0
+  background: transparent
+  +box-shadow-custom(0 0 0 0)
+  .modal-body
+    padding: 0
+    .lightbox-container
+      position: relative
+      overflow: hidden
+      width: 100%
+      i.esc-msg
+        color: #555
+        font-size: 11px
+        margin-top: 3px
+        margin-left: 10px
+      .lightbox-img
+        position: relative
+        width: 100%
+        height: auto
+        img
+          width: 100% !important
+          height: auto !important
+      .lightbox-panel
+        position: relative
+        width: 100%
+        overflow: hidden
+        background-color: #000
+        .lightbox-panel-inner
+          overflow: hidden
+          padding: 15px 30px
+          color: #fff
+          height: inherit
+          p.item-title
+            font-size: 18px
+            font-weight: bold
+            padding: 4px 3px
+            color: #fff
+            text-shadow: 0 1px 1px #333
+            text-transform: capitalize
+            letter-spacing: 0.03em
+            max-width: 100%
+          p.item-desc
+            margin-top: 20px
+            padding: 0 3px
+            letter-spacing: 0.03em
+            max-width: 100%
+            text-align: justify
+          a.item-owner-link
+            margin-top: 20px
+            display: table
+            .item-owner
+              +inline-block
+              img
+                +inline-block
+                height: 36px
+                border-radius: 50%
+              p
+                +inline-block
+                color: #ccc
+                margin-left: 10px
+                &:hover
+                  text-decoration: underline
+          @import "appreciations"

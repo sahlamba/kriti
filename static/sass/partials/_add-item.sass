@@ -1,0 +1,63 @@
+.add-dialog
+  overflow: hidden
+  position: relative
+  width: 100%
+  .multimedia
+    position: relative
+    width: 49%
+    +inline-block
+    cursor: pointer
+    *
+      color: $dark
+    &:hover
+      *
+        color: $orange
+    .inner
+      padding-right: 30px
+      .icons
+        position: relative
+        text-align: center
+        i
+          +inline-block
+          margin: 3px
+          font-size: 40px
+      p.option-name
+        font-size: 20px
+        text-align: center
+        margin-top: 6px
+      p.formats
+        font-size: 12px
+        text-align: center
+        margin-top: 5px
+  .separator
+    width: 1%
+    height: 120px
+    border-left: 2px solid $dark
+    +inline-block
+  .text
+    position: relative
+    width: 48%
+    +inline-block
+    cursor: pointer
+    *
+      color: $dark
+    &:hover
+      *
+        color: $orange
+    .inner
+      padding-left: 30px
+      .icons
+        position: relative
+        text-align: center
+        i
+          +inline-block
+          margin: 3px
+          font-size: 40px
+      p.option-name
+        font-size: 20px
+        text-align: center
+        margin-top: 6px
+      p.formats
+        font-size: 12px
+        text-align: center
+        margin-top: 5px
