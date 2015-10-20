@@ -36,7 +36,7 @@ angular.module('kriti.main')
             SearchService.search(this.query).then(function (results) {
               $scope.search.results = results;
               ngDialog.open({
-                template: '/static/views/parts/search.html',
+                template: 'static/views/parts/search.html',
                 className: 'ngdialog-theme-default',
                 overlay: false,
                 scope: $scope,
@@ -61,7 +61,7 @@ angular.module('kriti.main')
         openDialog: function () {
           // Opens dialog
           ngDialog.open({
-            template: '/static/views/parts/add.html',
+            template: 'static/views/parts/add.html',
             className: 'ngdialog-theme-default',
             overlay: true,
             scope: $scope
@@ -69,7 +69,7 @@ angular.module('kriti.main')
         },
         openForm: function (theOne) {
           // Open requested form dialog
-          var temp = '/static/views/parts/' + theOne + '.html';
+          var temp = 'static/views/parts/' + theOne + '.html';
           ngDialog.close('ngDialog1');
           ngDialog.open({
             template: temp,
