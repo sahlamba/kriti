@@ -9,6 +9,7 @@ angular.module('kriti', [
     'angularMoment',
     'bootstrapLightbox', // Lightboxes
     'sun.scrollable', // Nanoscroller Module
+    'kriti.filters',
     'kriti.services',
     'kriti.main',
     'kriti.home',

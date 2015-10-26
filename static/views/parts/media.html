@@ -1,0 +1,23 @@
+<div class="media-dialog">
+  <p class="heading">
+    <i class="fi-photo"></i>
+    <i class="fi-camera"></i>
+    <i class="fi-video"></i>
+  </p>
+  <form class="" validate>
+    <input type="text" name="title"
+      placeholder="Title *"
+      maxlength="50"
+      required=""
+      ng-model="newItem.item.title">
+      <div class="description">
+        <textarea name="description"
+          placeholder="Brief description"
+          maxlength="{~newItem.item.maxDescCount~}"
+          ng-model="newItem.item.description"></textarea>
+        <p class="text-count">{~newItem.item.description.length | fixUndefined~}/{~newItem.item.maxDescCount~}</p>
+      </div>
+    <div class="file-upload-btn"><i class="fi-upload"></i>&nbsp;&nbsp;Upload JPG, PNG or GIF</div>
+    <button class="file-upload-btn" type="submit" name="submit"><i class="fi-check"></i>&nbsp;&nbsp;Post</button>
+  </form>
+</div>
