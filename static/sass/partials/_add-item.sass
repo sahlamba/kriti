@@ -61,3 +61,44 @@
         font-size: 12px
         text-align: center
         margin-top: 5px
+
+.media-dialog
+  p.heading
+    margin-bottom: 10px
+    i
+      font-size: 35px
+      margin-right: 10px
+  form
+    input
+      width: 100%
+      padding: 12px
+      margin: 12px 0
+      border: 1px solid #ccc
+      &:focus
+        border-color: #333
+    .description
+      position: relative
+      width: 100%
+      height: 150px
+      textarea
+        width: 100%
+        height: 116px
+        resize: none
+        padding: 12px
+        margin: 12px 0
+        border: 1px solid #ccc
+        &:focus
+          border-color: #333
+      p.text-count
+        position: absolute
+        right: 0
+        bottom: 0
+    .file-upload-btn
+      +inline-block
+      padding: 10px
+      border: 1px solid #333
+      cursor: pointer
+      &:hover, &:focus
+        color: #fff
+        border-color: $orange
+        background-color: $orange

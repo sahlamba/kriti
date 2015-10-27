@@ -53,6 +53,7 @@ angular.module('kriti.main')
           title: null,
           owner: $rootScope.current_user,
           description: null, // Max 160 characters
+          maxDescCount: 160,
           appreciations: 0,
           appreciated: false,
           category: null,
