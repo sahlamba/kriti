@@ -59,6 +59,7 @@ angular.module('kriti.main')
           category: null,
           files: [], // Array of uploaded file links
         },
+        uploading: false, // Flag to check if uploading in progress
         openDialog: function () {
           // Opens dialog
           ngDialog.open({
@@ -70,6 +71,7 @@ angular.module('kriti.main')
         },
         openForm: function (theOne) {
           // Open requested form dialog
+          this.item.category = theOne;
           var temp = '/static/views/parts/' + theOne + '.html';
           ngDialog.close('ngDialog1');
           ngDialog.open({
@@ -80,17 +82,36 @@ angular.module('kriti.main')
           });
         },
         validateInputs: function () {
-          if (true) { // Check input field validations
-            return true;
+          if (this.item.title !== undefined) {
+            if (this.item.title.trim() !== '') { // Check input field validations
+              return true;
+            }
           } else {
             return false;
           }
         },
         addItem: function () {
+          this.uploading = true;
           if(this.validateInputs()) {
-            // Continue
+            console.log(this.item);
+            // Make request here
+            this.uploading = false; // Set to false after request completion
+            this.resetItemObject();
           } else {
-            // Throw up error
+            console.log('Please fill out all the necessary fields.');
+            this.uploading = false; // Set to false after request completion
+          }
+        },
+        resetItemObject: function () {
+          this.item = {
+            title: null,
+            owner: $rootScope.current_user,
+            description: null, // Max 160 characters
+            maxDescCount: 160,
+            appreciations: 0,
+            appreciated: false,
+            category: null,
+            files: [], // Array of uploaded file links
           }
         }
       };

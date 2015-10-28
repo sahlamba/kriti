@@ -5,10 +5,7 @@ angular.module('kriti', [
     'ngAnimate', // Animation Support
     'ui.router', // Routing Support
     'angular-loading-bar', // AJAX Loading Bar
-    'textAngular',
-    'angularMoment',
     'bootstrapLightbox', // Lightboxes
-    'sun.scrollable', // Nanoscroller Module
     'kriti.filters',
     'kriti.services',
     'kriti.main',
