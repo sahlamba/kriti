@@ -24,6 +24,13 @@ $header-height: 53px
     max-height: 51px
     padding: 0 50px
     margin: 0 auto
+    #circular-loader
+      position: absolute
+      display: block
+      top: 50%
+      left: 50%
+      margin-top: -8px
+      margin-left: -8px
     .logo-container
       +inline-block
       margin-top: 8px
@@ -73,9 +80,9 @@ $header-height: 53px
       .search
         +inline-block
         i
-          font-size: 22px
-          margin: 6px 5px 0 0
-          color: #fff
+          font-size: 18px
+          margin: 9px 0 0 -27px
+          color: #bbb
           display: inline-block
           vertical-align: top
         input
@@ -84,70 +91,13 @@ $header-height: 53px
           height: 27px
           width: 240px
           margin: 7px 0
-          padding: 3px 12px
+          padding: 3px 30px 3px 12px
           border: 0
           border-radius: 14px
-        .search-options-container
-          position: relative
-          +inline-block
-          background-color: $light-search
-          color: #fff
-          width: 80px
-          margin-left: 5px
-          padding: 1px 3px 3px 3px
-          border: 0
-          border-radius: 12px
-          cursor: pointer
-          &:hover
-            .search-options
-              display: block
-            & > p
-              text-decoration: underline
-          p
-            +inline-block
-            text-transform: capitalize
-            margin-left: 6px
-          i
-            +inline-block
-            float: right
-            font-size: 12px
-            margin-top: 5px
-            margin-right: 5px
-            z-index: 10
-          .search-options
-            display: none
-            position: absolute
-            top: 12px
-            right: 0
-            background-color: $light-search
-            color: #fff
-            width: 150px
-            overflow: hidden
-            padding-top: 14px
-            border: 0
-            border-radius: 3px 0 3px 3px
-            z-index: -1
-            +box-shadow($dark)
-            ul
-              list-style-type: none
-              li
-                padding: 8px
-                background-color: $light-search
-                cursor: auto
-                &:hover
-                  background-color: $dark
-                p
-                  +inline-block
-                  text-transform: capitalize
-                input
-                  +inline-block
-                  float: right
-                  width: 12px
-                  margin: -3px 5px 0 0
       .user
         position: relative
         display: inline-block
-        margin-left: 100px
+        margin-left: 20px
         a
           p.username
             +inline-block

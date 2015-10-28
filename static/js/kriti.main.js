@@ -10,15 +10,28 @@ angular.module('kriti.main', [])
   ]);
 
 angular.module('kriti.main')
-  .controller('MainCtrl', ['$rootScope', '$scope', '$state', 'SearchService', 'ngDialog',
-    function ($rootScope, $scope, $state, SearchService, ngDialog) {
+  .controller('MainCtrl', ['$rootScope', '$scope', '$state', 'ItemService', 'SearchService', 'ngDialog', 'Lightbox',
+    function ($rootScope, $scope, $state, ItemService, SearchService, ngDialog, Lightbox) {
       $rootScope.appTitle = 'Kriti'; // Bakchodi
+
+      $rootScope.items = []; // Global array of 'all' items
 
       // The 'current_user' object contains info about the logged in user
       $rootScope.current_user = {
         name: 'Mila Kunis',
         photo: 'http://media.onsugar.com/files/2011/01/05/1/192/1922153/ea8f1ca1b21ed7a8_mila.jpg',
-        enrolment: '13117060'
+        enrolment: '13117060',
+        about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo lectus nunc, non dignissim tellus blandit in. Donec ipsum lacus viverra fusce.'
+      };
+
+      // Open item in a lightbox
+      $rootScope.openItem = function (item) {
+        Lightbox.openModal([item], 0);
+      };
+
+      // Put in rootScope to use in lightbox also, appreciates item
+      $rootScope.appreciateItem = function (id) {
+        ItemService.appreciateItem(id);
       };
 
       // Search object contains query, results, request function
@@ -53,11 +66,13 @@ angular.module('kriti.main')
           title: null,
           owner: $rootScope.current_user,
           description: null, // Max 160 characters
+          maxDescCount: 160,
           appreciations: 0,
           appreciated: false,
           category: null,
           files: [], // Array of uploaded file links
         },
+        uploading: false, // Flag to check if uploading in progress
         openDialog: function () {
           // Opens dialog
           ngDialog.open({
@@ -69,6 +84,7 @@ angular.module('kriti.main')
         },
         openForm: function (theOne) {
           // Open requested form dialog
+          this.item.category = theOne;
           var temp = '/static/angular_views/kriti/parts/' + theOne + '.html';
           ngDialog.close('ngDialog1');
           ngDialog.open({
@@ -79,17 +95,36 @@ angular.module('kriti.main')
           });
         },
         validateInputs: function () {
-          if (true) { // Check input field validations
-            return true;
+          if (this.item.title !== undefined) {
+            if (this.item.title.trim() !== '') { // Check input field validations
+              return true;
+            }
           } else {
             return false;
           }
         },
         addItem: function () {
+          this.uploading = true;
           if(this.validateInputs()) {
-            // Continue
+            console.log(this.item);
+            // Make request here
+            this.uploading = false; // Set to false after request completion
+            this.resetItemObject();
           } else {
-            // Throw up error
+            console.log('Please fill out all the necessary fields.');
+            this.uploading = false; // Set to false after request completion
+          }
+        },
+        resetItemObject: function () {
+          this.item = {
+            title: null,
+            owner: $rootScope.current_user,
+            description: null, // Max 160 characters
+            maxDescCount: 160,
+            appreciations: 0,
+            appreciated: false,
+            category: null,
+            files: [], // Array of uploaded file links
           }
         }
       };

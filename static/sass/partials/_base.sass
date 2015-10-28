@@ -46,6 +46,9 @@ body
 .white
   color: #fff
 
+.text-right
+  text-align: right
+
 .inline-block-middle
   display: inline-block
   vertical-align: middle
@@ -75,6 +78,18 @@ h1, h2, h3, h4, h5, h6, p
     -ms-box-shadow: $orange 1px 0 6px 1px
     -webkit-box-shadow: $orange 1px 0 6px 1px
     box-shadow: $orange 1px 0 6px 1px
+
+#loading-bar-spinner
+  position: relative
+  display: block
+  top: 0
+  left: 0
+  & .spinner-icon
+    width: 16px
+    height: 16px
+    border: 2px solid transparent
+    border-top-color: $orange
+    border-left-color: $orange
 
 .ngdialog.ngdialog-theme-default
   .ngdialog-content

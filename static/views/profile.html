@@ -1,1 +1,45 @@
-YES!
+<div class="home" ng-init="getInitialData()">
+  <div class="profile">
+    <div class="profile-pic">
+      <div class="inner">
+        <img ng-src="{~ profileUser.photo ~}" />
+      </div>
+    </div>
+    <div class="profile-desc">
+      <div class="inner">
+        <h2 ng-bind="profileUser.name"></h2>
+        <p ng-bind="profileUser.about"></p>
+      </div>
+    </div>
+    <div class="profile-socials">
+      <div class="inner">
+        <p><i class="fa fa-graduation-cap"></i><span>B.Tech (III year) ME</span></p>
+        <a ng-href="#"><i class="fi-social-facebook"></i><p>Facebook</p></a>
+        <a ng-href="#"><i class="fi-social-500px"></i><p>500px</p></a>
+        <a ng-href="#"><i class="fi-social-dribbble"></i><p>Dribbble</p></a>
+      </div>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="feed-item toggle" ng-repeat="item in followingItems" ng-click="openItem(item)">
+      <div class="feed-thumbnail">
+        <img ng-src="{~ item.image ~}" alt=""/>
+      </div>
+      <!-- <div class="tag-container">
+        <div class="tag">
+          <p class="tag-type" ng-bind="item.itemType"></p>
+        </div>
+      </div> -->
+      <div class="more-details">
+        <p class="item-title" ng-bind="item.itemName"></p>
+        <a ui-sref="profile({id: item.enrolmentNo})" ng-click="$event.stopPropagation()">
+          <p class="owner" ng-bind="item.owner"></p>
+        </a>
+      </div>
+      <div class="appreciations-container">
+        <i class="fa fa-star-o" ng-click="$event.stopPropagation(); appreciateItem(item.id)" ></i>
+        <p class="appreciations" ng-bind="item.likes"></p>
+      </div>
+    </div>
+  </div>
+</div>

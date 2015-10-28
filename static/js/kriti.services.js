@@ -4,6 +4,17 @@
 
 angular.module('kriti.services', []);
 
+angular.module('kriti.services')
+  .factory('UserService', ['$q', '$http',
+    function ($q, $http) {
+      return {
+        getUser: function (enrolment) {
+          // body...
+        }
+      };
+    }
+  ]);
+
 // Item related services
 angular.module('kriti.services')
   .factory('ItemService', ['$q', '$http',
@@ -44,7 +55,9 @@ angular.module('kriti.services')
         search: function (query) {
           var defer = $q.defer();
 
-          defer.resolve({test: [1,2,3]});
+          defer.resolve({
+            test: [1, 2, 3]
+          });
           // Make http request here
           // $http.get(api.search)
           //   .success(function (data) {

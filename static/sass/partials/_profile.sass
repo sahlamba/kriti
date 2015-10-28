@@ -1,0 +1,61 @@
+.profile
+  position: relative
+  width: 100%
+  max-width: 1264px
+  overflow: hidden
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url('/static/images/kriti/pattern.png')
+  background-position: top left
+  background-repeat: repeat
+  background-attachment: fixed
+  margin: 0 auto 25px auto
+  +box-shadow-custom(0 1px 2px rgba(0,0,0,0.1))
+  .profile-pic
+    +inline-block
+    width: 25%
+    overflow: hidden
+    .inner
+      padding: 40px
+      text-align: center
+      overflow: hidden
+      img
+        width: 120px
+        border: 4px solid #fff
+        border-radius: 50%
+  .profile-desc
+    +inline-block
+    width: 45%
+    overflow: hidden
+    .inner
+      color: #fff
+      padding: 40px 0
+      h2
+        margin-bottom: 10px
+  .profile-socials
+    position: absolute
+    right: 0
+    top: 0
+    width: 24%
+    height: 100%
+    background-color: #fff
+    .inner
+      padding: 40px
+      p
+        margin: 4px 0
+        i
+          +inline-block
+          font-size: 16px
+          margin-right: 10px
+        span
+          +inline-block
+      a
+        display: table
+        margin: 4px 0
+        &:hover
+          i, p
+            color: $orange
+        i
+          +inline-block
+          margin-right: 10px
+          font-size: 20px
+        p
+          +inline-block
