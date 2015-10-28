@@ -29,9 +29,13 @@ angular.module('kriti', [
         return item.itemName; // Return item name/title to feed lightbox
       };
   }])
-  .run(function () {
+  .run(function ($rootScope) {
     Messenger.options = { // Options for Notification plugin
       extraClasses: 'messenger-fixed messenger-on-top messenger-on-right',
       theme: 'air'
     };
+    // Autoscroll to top on navigating to new route
+    $rootScope.$on('$stateChangeSuccess', function() {
+       document.body.scrollTop = document.documentElement.scrollTop = 0;
+    });
   });

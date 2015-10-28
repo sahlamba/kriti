@@ -10,15 +10,28 @@ angular.module('kriti.main', [])
   ]);
 
 angular.module('kriti.main')
-  .controller('MainCtrl', ['$rootScope', '$scope', '$state', 'SearchService', 'ngDialog',
-    function ($rootScope, $scope, $state, SearchService, ngDialog) {
+  .controller('MainCtrl', ['$rootScope', '$scope', '$state', 'ItemService', 'SearchService', 'ngDialog', 'Lightbox',
+    function ($rootScope, $scope, $state, ItemService, SearchService, ngDialog, Lightbox) {
       $rootScope.appTitle = 'Kriti'; // Bakchodi
+
+      $rootScope.items = []; // Global array of 'all' items
 
       // The 'current_user' object contains info about the logged in user
       $rootScope.current_user = {
         name: 'Mila Kunis',
         photo: 'http://media.onsugar.com/files/2011/01/05/1/192/1922153/ea8f1ca1b21ed7a8_mila.jpg',
-        enrolment: '13117060'
+        enrolment: '13117060',
+        about: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris commodo lectus nunc, non dignissim tellus blandit in. Donec ipsum lacus viverra fusce.'
+      };
+
+      // Open item in a lightbox
+      $rootScope.openItem = function (item) {
+        Lightbox.openModal([item], 0);
+      };
+
+      // Put in rootScope to use in lightbox also, appreciates item
+      $rootScope.appreciateItem = function (id) {
+        ItemService.appreciateItem(id);
       };
 
       // Search object contains query, results, request function
