@@ -16,7 +16,7 @@ angular.module('kriti', [
     function ($interpolateProvider, cfpLoadingBarProvider) {
       $interpolateProvider.startSymbol('{~'); // Prevent conflicts from Django Templating
       $interpolateProvider.endSymbol('~}');
-      cfpLoadingBarProvider.includeSpinner = false; // Remove loading-bar spinner
+      cfpLoadingBarProvider.parentSelector = '#circular-loader';
     }
   ])
   .config(['LightboxProvider',
