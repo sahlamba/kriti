@@ -901,3 +901,183 @@ h1, h2, h3, h4, h5, h6, p {
   -ms-transform: translateY(-3px);
   transform: translateY(-3px);
 }
+
+/* line 1, ../sass/partials/_search.sass */
+.search-results-container {
+  background-color: rgba(255, 255, 255, 0.98);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 700;
+  padding: 93px 100px 40px 100px;
+}
+/* line 10, ../sass/partials/_search.sass */
+.search-results-container .close-search {
+  position: absolute;
+  right: 100px;
+  top: 93px;
+  cursor: pointer;
+}
+/* line 15, ../sass/partials/_search.sass */
+.search-results-container .close-search i {
+  color: #333333;
+  font-size: 36px;
+  transition: all ease 150ms;
+  -webkit-transition: all ease 150ms;
+}
+/* line 19, ../sass/partials/_search.sass */
+.search-results-container .close-search i:hover {
+  font-size: 42px;
+}
+/* line 21, ../sass/partials/_search.sass */
+.search-results-container .search-students {
+  width: 80%;
+  max-width: 1164px;
+  overflow: hidden;
+  margin: 0 auto;
+}
+/* line 26, ../sass/partials/_search.sass */
+.search-results-container .search-students h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+/* line 29, ../sass/partials/_search.sass */
+.search-results-container .search-students h3 span {
+  color: #777777;
+}
+/* line 31, ../sass/partials/_search.sass */
+.search-results-container .search-students .students-list {
+  display: flex;
+  justify-content: space-between;
+}
+/* line 34, ../sass/partials/_search.sass */
+.search-results-container .search-students .students-list .student {
+  cursor: pointer;
+  transition: all ease 150ms;
+  -webkit-transition: all ease 150ms;
+}
+/* line 37, ../sass/partials/_search.sass */
+.search-results-container .search-students .students-list .student:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+/* line 39, ../sass/partials/_search.sass */
+.search-results-container .search-students .students-list .student img {
+  height: 50px;
+  border: 0;
+  border-radius: 100%;
+  margin-right: 8px;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 45, ../sass/partials/_search.sass */
+.search-results-container .search-students .students-list .student .info {
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 47, ../sass/partials/_search.sass */
+.search-results-container .search-students .students-list .student .info h4 {
+  font-weight: bold;
+  margin-bottom: 2px;
+}
+/* line 50, ../sass/partials/_search.sass */
+.search-results-container .search-students .students-list .student .info p {
+  color: #777777;
+}
+/* line 52, ../sass/partials/_search.sass */
+.search-results-container .search-items {
+  width: 80%;
+  max-width: 1164px;
+  overflow: hidden;
+  margin: 30px auto 0 auto;
+}
+/* line 57, ../sass/partials/_search.sass */
+.search-results-container .search-items h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+}
+/* line 60, ../sass/partials/_search.sass */
+.search-results-container .search-items h3 span {
+  color: #777777;
+}
+/* line 62, ../sass/partials/_search.sass */
+.search-results-container .search-items .items-list {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+/* line 66, ../sass/partials/_search.sass */
+.search-results-container .search-items .items-list .item {
+  position: relative;
+  width: 24%;
+  height: 150px;
+  margin-bottom: 12px;
+  padding: 12px;
+  background-position: top center;
+  background-color: #222831;
+  background-repeat: no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  transition: all ease 150ms;
+  -webkit-transition: all ease 150ms;
+}
+/* line 78, ../sass/partials/_search.sass */
+.search-results-container .search-items .items-list .item:hover {
+  -webkit-transform: translateY(-5px);
+  -ms-transform: translateY(-5px);
+  transform: translateY(-5px);
+}
+/* line 80, ../sass/partials/_search.sass */
+.search-results-container .search-items .items-list .item .details {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  bottom: 0;
+  padding: 6px 12px;
+  background: rgba(0, 0, 0, 0.1);
+  background: -moz-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, rgba(0, 0, 0, 0.1)), color-stop(100%, rgba(0, 0, 0, 0.6)));
+  background: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%);
+  background: -o-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%);
+  background: -ms-linear-gradient(top, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%);
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.1) 0%, rgba(0, 0, 0, 0.6) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffff', endColorstr='#000000',GradientType=0);
+}
+/* line 87, ../sass/partials/_search.sass */
+.search-results-container .search-items .items-list .item .details .appreciations {
+  position: relative;
+  margin-right: 12px;
+  display: inline-block;
+  vertical-align: middle;
+}
+/* line 91, ../sass/partials/_search.sass */
+.search-results-container .search-items .items-list .item .details .appreciations i {
+  color: #ffcc00;
+  font-size: 36px;
+}
+/* line 94, ../sass/partials/_search.sass */
+.search-results-container .search-items .items-list .item .details .appreciations p {
+  position: absolute;
+  top: 50%;
+  margin-top: -7px;
+  left: 50%;
+  margin-left: -12px;
+  font-weight: bold;
+  color: white;
+  text-shadow: 0 0 7px #333333;
+}
+/* line 103, ../sass/partials/_search.sass */
+.search-results-container .search-items .items-list .item .details .info {
+  display: inline-block;
+  vertical-align: middle;
+  color: white;
+}
+/* line 106, ../sass/partials/_search.sass */
+.search-results-container .search-items .items-list .item .details .info h4 {
+  font-weight: bold;
+  margin-bottom: 2px;
+  text-shadow: 0 0 7px #333333;
+}
