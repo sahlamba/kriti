@@ -5,6 +5,8 @@
     +declare-columns()
     .feed-item
       min-height: 150px
+      &:hover
+        +transform(translateY(-3px))
     .feed-item, .feed-options
       position: relative
       display: inline-block
@@ -15,6 +17,7 @@
       border: 0
       cursor: pointer
       +box-shadow-custom(0 1px 2px rgba(0,0,0,0.1))
+      +transition(150ms)
       &:hover
         .tag-container
           opacity: 1
@@ -96,4 +99,3 @@
             background-color: $primary
           &:last-of-type
             border: 0
-

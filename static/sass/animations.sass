@@ -1,0 +1,61 @@
+// Mixins
+=transform($content)
+  -webkit-transform: $content
+  -ms-transform: $content
+  transform: $content
+
+// Slide
+@keyframes slideTopIn
+  0%
+    transition-timing-function: ease
+    +transform(translateY(40px))
+    opacity: 0
+  100%
+    transition-timing-function: ease
+    +transform(translateY(0))
+    opacity: 1
+
+@keyframes slideTopOut
+  0%
+    transition-timing-function: ease
+    opacity: 1
+  100%
+    transition-timing-function: ease
+    opacity: 0
+
+.slide
+  &.ng-enter
+    animation: 0.5s slideTopIn ease
+  &.ng-leave
+    animation: 0.5s slideTopOut ease
+  &.ng-hide-remove
+    animation: 0.5s slideTopIn ease
+  &.ng-hide-add
+    animation: 0.5s slideTopOut ease
+
+// Fade Toggle
+@keyframes fadeIn
+  0%
+    transition-timing-function: ease
+    opacity: 0
+  100%
+    transition-timing-function: ease
+    opacity: 1
+
+@keyframes fadeOut
+  0%
+    transition-timing-function: ease
+    opacity: 1
+  50%
+    transition-timing-function: ease
+    opacity: 0
+
+.fade-toggle
+  &.ng-enter
+    animation: 0.5s fadeIn ease
+  &.ng-leave
+    animation: 0.5s fadeOut ease
+  &.ng-hide-remove
+    animation: 0.5s fadeIn ease
+  &.ng-hide-add
+    animation: 0.5s fadeOut ease

@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="/static/libs/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.min.css">
     <!-- css -->
     <link rel="stylesheet" href="/static/css/master.css" type="text/css">
-    <link rel="stylesheet" href="/static/css/ng-animations.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/animations.css" type="text/css">
   </head>
   <body class="ng-cloak" ng-init="startApp()" ng-cloak>
     <!-- header -->
@@ -31,7 +31,7 @@
     <!-- search results -->
     <div ng-include="'/static/views/parts/search.html'"></div>
     <!-- ui-view -->
-    <div ui-view>
+    <div ui-view class="slide">
       <div class="pre-loader">
         <img src="/static/images/puff-colored.svg" alt="Loading..." />
       </div>

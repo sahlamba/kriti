@@ -16,8 +16,8 @@
               <p>{~Lightbox.images[0].owner.name~}</p>
           </div>
         </a>
-        <div class="appreciations-container">
-          <i ng-class="{'fa fa-star-o': !Lightbox.images[0].appreciated, 'fa fa-star': Lightbox.images[0].appreciated}" ng-click="appreciateItem(Lightbox.images[0])" ></i>
+        <div class="appreciations-container" ng-click="appreciateItem(Lightbox.images[0])">
+          <i ng-class="{'fa fa-star-o': !Lightbox.images[0].appreciated, 'fa fa-star': Lightbox.images[0].appreciated}"></i>
           <p class="appreciations" ng-bind="Lightbox.images[0].appreciations"></p>
         </div>
       </div>

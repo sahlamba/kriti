@@ -171,8 +171,9 @@ angular.module('kriti.services')
         search: function (query) {
           var defer = $q.defer();
 
-          $http.get(api.search(query))
-            .success(function (data) {
+          $http.get(api.search(query), {
+            ignoreLoadingBar: true
+          }).success(function (data) {
               defer.resolve(data);
             })
             .error(function () {

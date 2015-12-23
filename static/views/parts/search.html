@@ -1,11 +1,10 @@
-<div class="search-results-container" id="search-results"
+<div class="search-results-container slide" id="search-results"
   ng-show="search.query !== null && search.query !== undefined && search.query !== ''">
   <div class="close-search" ng-click="search.close()">
     <i class="fi-x"></i>
   </div>
   <div class="searching" ng-if="search.searching">
-    <!-- Add loading SVG here -->
-    <h3>Searching...</h3>
+    <img src="/static/images/puff-colored.svg" alt="Searching..." />
   </div>
   <div class="search-students" ng-if="!search.searching">
     <h3>People <span>(Showing <span ng-if="search.results.students.length <= 4">{~ search.results.totalStudents ~}</span><span ng-if="search.results.students.length > 4">4</span> of {~ search.results.totalStudents ~})</span></h3>

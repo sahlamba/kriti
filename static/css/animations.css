@@ -1,0 +1,95 @@
+@keyframes slideTopIn {
+  /* line 9, ../sass/animations.sass */
+  0% {
+    transition-timing-function: ease;
+    -webkit-transform: translateY(40px);
+    -ms-transform: translateY(40px);
+    transform: translateY(40px);
+    opacity: 0;
+  }
+
+  /* line 13, ../sass/animations.sass */
+  100% {
+    transition-timing-function: ease;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideTopOut {
+  /* line 19, ../sass/animations.sass */
+  0% {
+    transition-timing-function: ease;
+    opacity: 1;
+  }
+
+  /* line 22, ../sass/animations.sass */
+  100% {
+    transition-timing-function: ease;
+    opacity: 0;
+  }
+}
+
+/* line 27, ../sass/animations.sass */
+.slide.ng-enter {
+  animation: 0.5s slideTopIn ease;
+}
+/* line 29, ../sass/animations.sass */
+.slide.ng-leave {
+  animation: 0.5s slideTopOut ease;
+}
+/* line 31, ../sass/animations.sass */
+.slide.ng-hide-remove {
+  animation: 0.5s slideTopIn ease;
+}
+/* line 33, ../sass/animations.sass */
+.slide.ng-hide-add {
+  animation: 0.5s slideTopOut ease;
+}
+
+@keyframes fadeIn {
+  /* line 38, ../sass/animations.sass */
+  0% {
+    transition-timing-function: ease;
+    opacity: 0;
+  }
+
+  /* line 41, ../sass/animations.sass */
+  100% {
+    transition-timing-function: ease;
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  /* line 46, ../sass/animations.sass */
+  0% {
+    transition-timing-function: ease;
+    opacity: 1;
+  }
+
+  /* line 49, ../sass/animations.sass */
+  50% {
+    transition-timing-function: ease;
+    opacity: 0;
+  }
+}
+
+/* line 54, ../sass/animations.sass */
+.fade-toggle.ng-enter {
+  animation: 0.5s fadeIn ease;
+}
+/* line 56, ../sass/animations.sass */
+.fade-toggle.ng-leave {
+  animation: 0.5s fadeOut ease;
+}
+/* line 58, ../sass/animations.sass */
+.fade-toggle.ng-hide-remove {
+  animation: 0.5s fadeIn ease;
+}
+/* line 60, ../sass/animations.sass */
+.fade-toggle.ng-hide-add {
+  animation: 0.5s fadeOut ease;
+}

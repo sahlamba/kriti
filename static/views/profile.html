@@ -51,8 +51,8 @@
           <p class="owner" ng-bind="item.owner.name"></p>
         </a>
       </div>
-      <div class="appreciations-container">
-        <i ng-class="{'fa fa-star-o': !item.appreciated, 'fa fa-star': item.appreciated}" ng-click="$event.stopPropagation(); appreciateItem(item)" ></i>
+      <div class="appreciations-container" ng-click="$event.stopPropagation(); appreciateItem(item)">
+        <i ng-class="{'fa fa-star-o': !item.appreciated, 'fa fa-star': item.appreciated}"></i>
         <p class="appreciations" ng-if="item.appreciations > 0" ng-bind="item.appreciations"></p>
       </div>
     </div>
