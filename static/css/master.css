@@ -701,7 +701,7 @@ h1, h2, h3, h4, h5, h6, p {
   max-width: 1264px;
   overflow: hidden;
   background-color: #2c3135;
-  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("/static/images/default.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("/kriti/static/images/default.jpg");
   background-position: top left;
   background-repeat: repeat;
   background-attachment: fixed;
