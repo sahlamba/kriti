@@ -10,6 +10,9 @@
       </div>
     </div>
     <div class="feed-item toggle" ng-repeat="item in displayed_items" ng-click="openItem(item)">
+      <div class="delete-button" ng-if="isOwnerOf(item)" ng-click="$event.stopPropagation(); deleteItem(item.id)">
+        <p>&times;</p>
+      </div>
       <div class="feed-thumbnail">
         <img ng-src="{~ item.entities[0].file ~}" alt="{~item.title~}"/>
       </div>

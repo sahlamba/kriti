@@ -23,6 +23,23 @@
           opacity: 1
         .more-details
           opacity: 1
+      .delete-button
+        position: absolute
+        top: 10px
+        right: 10px
+        width: 25px
+        height: 25px
+        background-color: #fff
+        border-radius: 100%
+        +box-shadow-custom(0 0 10px 0 $light)
+        p
+          font-size: 20px
+          line-height: 21px
+          text-align: center
+          +transition(150ms)
+        &:hover
+          p
+            font-size: 25px
       .feed-thumbnail
         width: 100%
         font-size: 0
