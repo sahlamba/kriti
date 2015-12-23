@@ -11,7 +11,7 @@ angular.module('kriti.home', [])
       $stateProvider
         .state('home', {
           url: '/',
-          templateUrl: '/static/angular_views/kriti/home.html',
+          templateUrl: '/static/views/home.html',
           controller: 'HomeCtrl'
         });
     }
