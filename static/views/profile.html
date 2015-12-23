@@ -1,1 +1,60 @@
-YES!
+<div class="home" ng-init="getInitialData()">
+  <div class="profile">
+    <button class="follow-btn" ng-if="!profileUser.self" ng-click="followUser(profileUser.enrollmentNo, !profileUser.followingPerson)">
+      <i ng-class="{'fa fa-user-plus': !profileUser.followingPerson, 'fa fa-user-times': profileUser.followingPerson}"></i><p ng-if="profileUser.followingPerson">Unfollow</p><p ng-if="!profileUser.followingPerson">Follow</p>
+    </button>
+    <div class="profile-container">
+      <div class="profile-pic">
+        <div class="inner">
+          <img ng-src="{~ profileUser.photo ~}" />
+        </div>
+      </div>
+      <div class="profile-desc">
+        <div class="inner">
+          <h2 ng-bind="profileUser.name"></h2>
+          <p><i class="fa fa-graduation-cap"></i><span ng-bind="profileUser.branch"></span></p>
+          <p ng-bind="profileUser.aboutMe"></p>
+        </div>
+      </div>
+      <div class="profile-num">
+        <div class="inner">
+          <div class="big-num" ng-if="profileUser.totalAppreciations > 0">
+            <span ng-bind="profileUser.totalAppreciations"></span>
+            <i class="fa fa-star"></i> stars
+          </div>
+        </div>
+      </div>
+      <div class="separator"></div>
+      <div class="profile-socials">
+        <div class="inner">
+          <a ng-href="{~profileUser.facebook[0]~}" target="_blank"><i class="fi-social-facebook"></i></a>
+          <a ng-href="{~profileUser.twitter[0]~}" target="_blank"><i class="fi-social-twitter"></i></a>
+          <a ng-href="{~profileUser.quora[0]~}" target="_blank"><i class="">Q</i></a>
+          <a ng-href="{~profileUser.blog[0]~}" target="_blank"><i class="fi-social-blogger"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="columns">
+    <div class="feed-item toggle" ng-repeat="item in profileUser.addedItems" ng-click="openItem(item)">
+      <div class="feed-thumbnail">
+        <img ng-src="{~ item.entities[0].file ~}" alt="{~item.title~}"/>
+      </div>
+      <!-- <div class="tag-container">
+        <div class="tag">
+          <p class="tag-type" ng-bind="item.itemType"></p>
+        </div>
+      </div> -->
+      <div class="more-details">
+        <p class="item-title" ng-bind="item.title"></p>
+        <a ui-sref="profile({id: item.owner.enrollmentNo})" ng-click="$event.stopPropagation()">
+          <p class="owner" ng-bind="item.owner.name"></p>
+        </a>
+      </div>
+      <div class="appreciations-container">
+        <i ng-class="{'fa fa-star-o': !item.appreciated, 'fa fa-star': item.appreciated}" ng-click="$event.stopPropagation(); appreciateItem(item)" ></i>
+        <p class="appreciations" ng-if="item.appreciations > 0" ng-bind="item.appreciations"></p>
+      </div>
+    </div>
+  </div>
+</div>

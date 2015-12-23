@@ -1,25 +1,31 @@
 // Colors
-$dark: #1A2634
-$light: #203E5F
-$light-search: #405e9f // Experimental
-$yellow: #FFCC00
-$dull-yellow: #FEE5B1
+//$dark: #1A2634
+//$light: #203E5F
+//$light-search: #405e9f // Experimental
+//$yellow: #FFCC00
+//$dull-yellow: #FEE5B1
 
-$dark-grey: #222831
-$light-grey: #393E46
-$aqua: #00ADB5
-$light-white: #EEEEEE
+//$dark-grey: #222831
+//$light-grey: #393E46
+//$aqua: #00ADB5
+//$light-white: #EEEEEE
 
-$dark-blue: #2B2E4A
-$red: #E84545
-$maroon: #903749
-$dull-red: #53354A
+//$dark-blue: #2B2E4A
+//$red: #E84545
+//$maroon: #903749
+//$dull-red: #53354A
 
-$another-shade-of-grey: #2B3134
-$another-yellow: #FBB040
-$orange: #DE703C
+//$another-shade-of-grey: #2B3134
+//$another-yellow: #FBB040
+//$orange: #DE703C
 
-$tag-art: $red
+// Final Color Palette
+$dark: #2c3135
+$light: #3e4245
+$primary: #d65152
+$yellow: #ffcc00
+$light-yellow: #ffeb91
+$light-white: #eeeeee
 
 *
   margin: 0
@@ -46,6 +52,9 @@ body
 .white
   color: #fff
 
+.text-right
+  text-align: right
+
 .inline-block-middle
   display: inline-block
   vertical-align: middle
@@ -69,12 +78,24 @@ h1, h2, h3, h4, h5, h6, p
 // Overrides
 #loading-bar
   .bar
-    background: $orange
+    background: $primary
   .peg
-    -moz-box-shadow: $orange 1px 0 6px 1px
-    -ms-box-shadow: $orange 1px 0 6px 1px
-    -webkit-box-shadow: $orange 1px 0 6px 1px
-    box-shadow: $orange 1px 0 6px 1px
+    -moz-box-shadow: $primary 1px 0 6px 1px
+    -ms-box-shadow: $primary 1px 0 6px 1px
+    -webkit-box-shadow: $primary 1px 0 6px 1px
+    box-shadow: $primary 1px 0 6px 1px
+
+#loading-bar-spinner
+  position: relative
+  display: block
+  top: 0
+  left: 0
+  & .spinner-icon
+    width: 16px
+    height: 16px
+    border: 2px solid transparent
+    border-top-color: $primary
+    border-left-color: $primary
 
 .ngdialog.ngdialog-theme-default
   .ngdialog-content

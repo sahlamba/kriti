@@ -18,7 +18,29 @@ angular.module('kriti.profile', [])
   ]);
 
 angular.module('kriti.profile')
-  .controller('ProfileCtrl', ['$scope', 'ItemService',
-    function ($scope, ItemService) {
+  .controller('ProfileCtrl', ['$scope', '$rootScope', '$stateParams', 'ItemService', 'UserService', 'NotificationSys',
+    function ($scope, $rootScope, $stateParams, ItemService, UserService, NotificationSys) {
+
+      $scope.getInitialData = function () { // Get all data of current profile's user
+          if ($rootScope.current_user.enrollmentNo === $stateParams.id && $rootScope.current_user.profile) {
+            $scope.profileUser = $rootScope.current_user.profile;
+          } else {
+            UserService.getUser($stateParams.id).then(function (data) {
+              $scope.profileUser = data;
+              NotificationSys.notify("Profile data transfer complete.", "success");
+            });
+          }
+      };
+
+      // Follow/Unfollow a person
+      $scope.followUser = function (user, action) {
+        UserService.follow_unfollow(user, action).then(function (resp) {
+          if (resp) {
+            $scope.profileUser.followingPerson = !$scope.profileUser.followingPerson;
+            $rootScope.updateCurrentUserProfile();
+          }
+        });
+      };
+
     }
   ]);

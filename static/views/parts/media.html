@@ -1,23 +1,36 @@
 <div class="media-dialog">
   <p class="heading">
+    <span class="text">Add artwork/photography</span>
     <i class="fi-photo"></i>
     <i class="fi-camera"></i>
-    <i class="fi-video"></i>
   </p>
-  <form class="" validate>
-    <input type="text" name="title"
+  <form ng-submit="newItem.addItem(mediaFile)" validate>
+    <input type="text"
       placeholder="Title *"
       maxlength="50"
       required=""
       ng-model="newItem.item.title">
-      <div class="description">
-        <textarea name="description"
-          placeholder="Brief description"
-          maxlength="{~newItem.item.maxDescCount~}"
-          ng-model="newItem.item.description"></textarea>
-        <p class="text-count">{~newItem.item.description.length | fixUndefined~}/{~newItem.item.maxDescCount~}</p>
+    <div class="description">
+      <textarea
+        placeholder="Brief description"
+        maxlength="{~newItem.item.maxDescCount~}"
+        ng-model="newItem.item.description"></textarea>
+      <p class="text-count">{~newItem.item.description.length | fixUndefined~}/{~newItem.item.maxDescCount~}</p>
+    </div>
+    <div class="btn-wrapper">
+      <div class="form-btn" ngf-select name="file"
+        ng-model="mediaFile"
+        ngf-accept="'image/*'"
+        ngf-max-size="10MB"
+        required="">
+        <i class="fi-upload"></i>&nbsp;&nbsp;Upload JPG, PNG or GIF <sup>*</sup>
       </div>
-    <div class="file-upload-btn"><i class="fi-upload"></i>&nbsp;&nbsp;Upload JPG, PNG or GIF</div>
-    <button class="file-upload-btn" type="submit" name="submit"><i class="fi-check"></i>&nbsp;&nbsp;Post</button>
+      <img ngf-thumbnail="mediaFile">
+    </div>
+    <div class="btn-wrapper text-right">
+      <button class="form-btn" type="submit">
+        <i ng-class="{'fa fa-circle-o-notch fa-spin': newItem.uploading, 'fi-check': !newItem.uploading}"></i>&nbsp;&nbsp;Post
+      </button>
+    </div>
   </form>
 </div>

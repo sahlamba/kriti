@@ -1,41 +1,20 @@
 <div class="header">
   <div class="inner">
+    <div id="circular-loader">
+    </div>
     <div class="logo-container">
      <a href="/"><img src="static/images/logo.png" alt="Kriti" /></a>
     </div>
     <div class="add-new" ng-click="newItem.openDialog()">
       <i class="fi-plus"></i><p>Add new</p>
-      <!-- <div class="add-new-options">
-        <ul>
-          <li>Article</li>
-          <li>Poem</li>
-          <li>Painting</li>
-          <li>Sketch</li>
-          <li>Graphic</li>
-          <li>Photograph</li>
-        </ul>
-      </div> -->
     </div>
     <div class="user-panel">
       <div class="search">
+        <input type="text" name="search" ng-model="search.query" placeholder="Search people, items" ng-change="search.search()">
         <i class="fi-magnifying-glass"></i>
-        <input type="text" name="search" ng-model="search.query" placeholder="Search" ng-change="search.search()">
-        <!-- <div class="search-options-container">
-          <p ng-bind="search.in"></p>
-          <i class="fa fa-caret-down"></i>
-          <div class="search-options">
-            <form>
-              <ul>
-                <li ng-repeat="option in search.options">
-                  <p ng-bind="option"></p><input type="radio" ng-model="search.in" value="{~option~}" />
-                </li>
-              </ul>
-            </form>
-          </div>
-        </div> -->
       </div>
       <div class="user">
-        <a ui-sref="profile({id: current_user.enrolment})">
+        <a ui-sref="profile({id: current_user.enrollmentNo})">
           <p class="username" ng-bind="current_user.name"></p>
         </a>
         <div class="user-pic-container">
@@ -43,9 +22,9 @@
           <i class="fa fa-caret-down white inline-block-middle"></i>
           <div class="user-options">
             <ul>
-              <li><a ui-sref="profile({id: current_user.enrolment})"><i class="fi-layout"></i>Your Profile</a></li>
-              <li><a href="https://channeli.in"><i class="fi-info"></i>Channeli</a></li>
-              <li><a href="https://channeli.in"><i class="fi-power"></i>Log Out</a></li>
+              <li><a ui-sref="profile({id: current_user.enrollmentNo})"><i class="fi-layout"></i>Your Profile</a></li>
+              <li><a href="/"><i class="fi-info"></i>Channeli</a></li>
+              <li><a href="/logout/"><i class="fi-power"></i>Log Out</a></li>
             </ul>
           </div>
         </div>
