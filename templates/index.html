@@ -5,8 +5,8 @@
     <base href="/" />
     <title ng-bind="appTitle"></title>
     <!-- links -->
-    <link rel="icon" href="/static/favicon.ico" type="image/x-icon"/>
-    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon"/>
+    <link rel="icon" href="/static/images/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="/static/images/favicon.ico" type="image/x-icon"/>
     <link href='//fonts.googleapis.com/css?family=Oxygen:300,400,700' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
     <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/messenger/1.4.2/css/messenger.min.css">
@@ -15,18 +15,21 @@
     <link href='//cdnjs.cloudflare.com/ajax/libs/foundicons/3.0.0/foundation-icons.min.css' rel='stylesheet' type='text/css'>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
     <!-- libs/css -->
+
     <link rel="stylesheet" href="/static/libs/angular-loading-bar/build/loading-bar.min.css">
     <link rel="stylesheet" href="/static/libs/ngDialog/css/ngDialog.min.css">
     <link rel="stylesheet" href="/static/libs/ngDialog/css/ngDialog-theme-default.min.css">
     <link rel="stylesheet" href="/static/libs/ngDialog/css/ngDialog-theme-plain.min.css">
     <link rel="stylesheet" href="/static/libs/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.min.css">
     <!-- css -->
-    <link rel="stylesheet" href="/static/css/master.css">
-    <link rel="stylesheet" href="/static/css/ng-animations.css">
+    <link rel="stylesheet" href="/static/css/master.css" type="text/css">
+    <link rel="stylesheet" href="/static/css/ng-animations.css" type="text/css">
   </head>
-  <body class="ng-cloak" ng-cloak>
+  <body class="ng-cloak" ng-init="startApp()" ng-cloak>
     <!-- header -->
     <div ng-include="'/static/views/parts/header.html'"></div>
+    <!-- search results -->
+    <div ng-include="'/static/views/parts/search.html'"></div>
     <!-- ui-view -->
     <div ui-view>
       <div class="pre-loader">
@@ -44,6 +47,8 @@
     <script src="/static/libs/angular-bootstrap/ui-bootstrap-tpls.min.js" type="text/javascript"></script>
     <script src="/static/libs/angular-bootstrap-lightbox/dist/angular-bootstrap-lightbox.min.js" type="text/javascript"></script>
     <script src="//cdnjs.cloudflare.com/ajax/libs/messenger/1.4.2/js/messenger.min.js" type="text/javascript"></script>
+    <script src="/static/libs/ng-file-upload/ng-file-upload-shim.min.js"></script> <!-- for no html5 browsers support -->
+    <script src="/static/libs/ng-file-upload/ng-file-upload.min.js"></script>
     <!-- app -->
     <script src="/static/js/api.js" type="text/javascript"></script>
     <script src="/static/js/app.js" type="text/javascript"></script>

@@ -1,4 +1,4 @@
-.search-results-container
+#search-results.search-results-container
   background-color: rgba(255, 255, 255, 0.98)
   position: fixed
   top: 0
@@ -13,11 +13,14 @@
     top: 93px
     cursor: pointer
     i
-      color: #333
+      color: $dark
       font-size: 36px
       +transition(150ms)
       &:hover
         font-size: 42px
+  .searching
+    h3
+      color: $primary
   .search-students
     width: 80%
     max-width: 1164px
@@ -26,8 +29,12 @@
     h3
       font-size: 20px
       margin-bottom: 15px
+      color: $dark
       span
-        color: #777
+        color: $dark
+    .no-students
+      h2
+        color: $light
     .students-list
       display: flex
       justify-content: space-between
@@ -48,7 +55,7 @@
             font-weight: bold
             margin-bottom: 2px
           p
-            color: #777
+            color: $light
   .search-items
     width: 80%
     max-width: 1164px
@@ -57,8 +64,12 @@
     h3
       font-size: 20px
       margin-bottom: 15px
+      color: $dark
       span
-        color: #777
+        color: $dark
+    .no-items
+      h2
+        color: $light
     .items-list
       display: flex
       justify-content: space-between
@@ -70,7 +81,7 @@
         margin-bottom: 12px
         padding: 12px
         background-position: top center
-        background-color: $dark-grey
+        background-color: $dark
         background-repeat: no-repeat
         background-size: cover
         cursor: pointer
@@ -104,6 +115,7 @@
             +inline-block
             color: #fff
             h4
+              font-size: 14px
               font-weight: bold
               margin-bottom: 2px
               text-shadow: 0 0 7px #333

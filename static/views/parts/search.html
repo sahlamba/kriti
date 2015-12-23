@@ -1,2 +1,48 @@
-<h1>Search Results here</h1>
-<p ng-repeat="i in ngDialogData.test">{~i~}</p>
+<div class="search-results-container" id="search-results"
+  ng-show="search.query !== null && search.query !== undefined && search.query !== ''">
+  <div class="close-search" ng-click="search.close()">
+    <i class="fi-x"></i>
+  </div>
+  <div class="searching" ng-if="search.searching">
+    <!-- Add loading SVG here -->
+    <h3>Searching...</h3>
+  </div>
+  <div class="search-students" ng-if="!search.searching">
+    <h3>People <span>(Showing <span ng-if="search.results.students.length <= 4">{~ search.results.totalStudents ~}</span><span ng-if="search.results.students.length > 4">4</span> of {~ search.results.totalStudents ~})</span></h3>
+    <div class="no-students" ng-if="search.results.totalStudents === 0">
+      <h2>No people found</h2>
+    </div>
+    <div class="students-list" ng-if="search.results.totalStudents > 0">
+      <div class="student" ng-repeat="stu in search.results.students | limitTo: 4"
+        ng-click="goTo('profile', {id: stu.id}); search.close()">
+        <img ng-src="{~ stu.profile_pic ~}" />
+        <div class="info">
+          <h4 ng-bind="stu.value"></h4>
+          <p ng-bind="stu.label"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="search-items" ng-if="!search.searching">
+    <h3>Items <span>(Showing <span ng-if="search.results.students.length <= 8">{~ search.results.totalTitle ~}</span><span ng-if="search.results.itemsTitle.length > 8">8</span> of {~ search.results.totalTitle ~})</span></h3>
+    <div class="no-items" ng-if="search.results.totalTitle === 0">
+      <h2>No items to display</h2>
+    </div>
+    <div class="items-list" ng-if="search.results.totalTitle > 0">
+      <div class="item" ng-repeat="itm in search.results.itemsTitle | limitTo: 8"
+        ng-style="{'background-image': 'url({~ itm.entities[0].file ~})'}"
+        ng-click="openItem(itm)">
+        <div class="details">
+          <div class="appreciations" ng-click="$event.stopPropagation(); appreciateItem(itm)">
+            <i ng-class="{'fa fa-star-o': !itm.appreciated, 'fa fa-star': itm.appreciated}"></i>
+            <p ng-bind="itm.appreciations"></p>
+          </div>
+          <div class="info">
+            <h4 ng-bind="itm.title"></h4>
+            <p ng-bind="itm.owner.name"></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

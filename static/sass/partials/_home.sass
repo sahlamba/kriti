@@ -4,11 +4,12 @@
   .columns
     +declare-columns()
     .feed-item
+      min-height: 150px
+    .feed-item, .feed-options
       position: relative
       display: inline-block
-      background-color: $another-shade-of-grey
+      background-color: $light
       width: 100%
-      min-height: 150px
       margin-bottom: 20px
       padding: 0
       border: 0
@@ -36,7 +37,7 @@
           padding: 1px 8px
           border: 0
           border-radius: 12px
-          background-color: $tag-art
+          background-color: $light-yellow
           color: #fff
           +box-shadow-custom(0 0 10px -3px rgba(0,0,0,0.5))
           p
@@ -76,3 +77,23 @@
             &:hover
               text-decoration: underline
       @import "appreciations"
+    .feed-options
+      background-color: #fff
+      .inner
+        .option
+          display: inline-block
+          color: #aaa
+          background-color: #fff
+          width: 50%
+          text-align: center
+          padding: 30px
+          border-right: 1px solid $light
+          &.selected
+            color: #fff
+            background-color: $light
+          &:hover
+            color: #fff
+            background-color: $primary
+          &:last-of-type
+            border: 0
+
