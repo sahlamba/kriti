@@ -62,7 +62,7 @@
         text-align: center
         margin-top: 5px
 
-.media-dialog
+.media-dialog, .update-profile-dialog
   p.heading
     margin-bottom: 10px
     .text
@@ -73,6 +73,27 @@
       font-size: 35px
       margin-left: 12px
   form
+    .social-links
+      display: flex
+      justify-content: space-between
+      flex-flow: row wrap
+      .input-with-icon
+        width: 49%
+        display: flex
+        justify-content: center
+        align-items: center
+        i, p.icon
+          +inline-block
+          font-size: 28px
+          margin-right: 6px
+        input
+          +inline-block
+          max-width: 80%
+          padding: 12px
+          margin: 12px 0
+          border: 1px solid #ccc
+          &:focus
+            border-color: #333
     input
       width: 100%
       padding: 12px
@@ -85,6 +106,8 @@
       width: 100%
       height: 135px
       margin-bottom: 12px
+      p
+        font-weight: bold
       textarea
         width: 100%
         height: 104px
@@ -99,6 +122,11 @@
         position: absolute
         right: 4px
         bottom: 0
+        &.name
+          right: auto
+          left: 4px
+    p.info
+      font-size: 11px
     .btn-wrapper
       +inline-block
       width: 49%

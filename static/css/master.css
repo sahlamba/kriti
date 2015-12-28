@@ -434,42 +434,79 @@ h1, h2, h3, h4, h5, h6, p {
 }
 
 /* line 66, ../sass/partials/_add-item.sass */
-.media-dialog p.heading {
+.media-dialog p.heading, .update-profile-dialog p.heading {
   margin-bottom: 10px;
 }
 /* line 68, ../sass/partials/_add-item.sass */
-.media-dialog p.heading .text {
+.media-dialog p.heading .text, .update-profile-dialog p.heading .text {
   display: inline-block;
   vertical-align: middle;
   font-size: 20px;
 }
 /* line 71, ../sass/partials/_add-item.sass */
-.media-dialog p.heading i {
+.media-dialog p.heading i, .update-profile-dialog p.heading i {
   display: inline-block;
   vertical-align: middle;
   font-size: 35px;
   margin-left: 12px;
 }
 /* line 76, ../sass/partials/_add-item.sass */
-.media-dialog form input {
+.media-dialog form .social-links, .update-profile-dialog form .social-links {
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+}
+/* line 80, ../sass/partials/_add-item.sass */
+.media-dialog form .social-links .input-with-icon, .update-profile-dialog form .social-links .input-with-icon {
+  width: 49%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* line 85, ../sass/partials/_add-item.sass */
+.media-dialog form .social-links .input-with-icon i, .media-dialog form .social-links .input-with-icon p.icon, .update-profile-dialog form .social-links .input-with-icon i, .update-profile-dialog form .social-links .input-with-icon p.icon {
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 28px;
+  margin-right: 6px;
+}
+/* line 89, ../sass/partials/_add-item.sass */
+.media-dialog form .social-links .input-with-icon input, .update-profile-dialog form .social-links .input-with-icon input {
+  display: inline-block;
+  vertical-align: middle;
+  max-width: 80%;
+  padding: 12px;
+  margin: 12px 0;
+  border: 1px solid #cccccc;
+}
+/* line 95, ../sass/partials/_add-item.sass */
+.media-dialog form .social-links .input-with-icon input:focus, .update-profile-dialog form .social-links .input-with-icon input:focus {
+  border-color: #333333;
+}
+/* line 97, ../sass/partials/_add-item.sass */
+.media-dialog form input, .update-profile-dialog form input {
   width: 100%;
   padding: 12px;
   margin: 12px 0;
   border: 1px solid #cccccc;
 }
-/* line 81, ../sass/partials/_add-item.sass */
-.media-dialog form input:focus {
+/* line 102, ../sass/partials/_add-item.sass */
+.media-dialog form input:focus, .update-profile-dialog form input:focus {
   border-color: #333333;
 }
-/* line 83, ../sass/partials/_add-item.sass */
-.media-dialog form .description {
+/* line 104, ../sass/partials/_add-item.sass */
+.media-dialog form .description, .update-profile-dialog form .description {
   position: relative;
   width: 100%;
   height: 135px;
   margin-bottom: 12px;
 }
-/* line 88, ../sass/partials/_add-item.sass */
-.media-dialog form .description textarea {
+/* line 109, ../sass/partials/_add-item.sass */
+.media-dialog form .description p, .update-profile-dialog form .description p {
+  font-weight: bold;
+}
+/* line 111, ../sass/partials/_add-item.sass */
+.media-dialog form .description textarea, .update-profile-dialog form .description textarea {
   width: 100%;
   height: 104px;
   line-height: 14px;
@@ -478,24 +515,33 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 12px 0;
   border: 1px solid #cccccc;
 }
-/* line 96, ../sass/partials/_add-item.sass */
-.media-dialog form .description textarea:focus {
+/* line 119, ../sass/partials/_add-item.sass */
+.media-dialog form .description textarea:focus, .update-profile-dialog form .description textarea:focus {
   border-color: #333333;
 }
-/* line 98, ../sass/partials/_add-item.sass */
-.media-dialog form .description p.text-count {
+/* line 121, ../sass/partials/_add-item.sass */
+.media-dialog form .description p.text-count, .update-profile-dialog form .description p.text-count {
   position: absolute;
   right: 4px;
   bottom: 0;
 }
-/* line 102, ../sass/partials/_add-item.sass */
-.media-dialog form .btn-wrapper {
+/* line 125, ../sass/partials/_add-item.sass */
+.media-dialog form .description p.text-count.name, .update-profile-dialog form .description p.text-count.name {
+  right: auto;
+  left: 4px;
+}
+/* line 128, ../sass/partials/_add-item.sass */
+.media-dialog form p.info, .update-profile-dialog form p.info {
+  font-size: 11px;
+}
+/* line 130, ../sass/partials/_add-item.sass */
+.media-dialog form .btn-wrapper, .update-profile-dialog form .btn-wrapper {
   display: inline-block;
   vertical-align: middle;
   width: 49%;
 }
-/* line 105, ../sass/partials/_add-item.sass */
-.media-dialog form .btn-wrapper .form-btn {
+/* line 133, ../sass/partials/_add-item.sass */
+.media-dialog form .btn-wrapper .form-btn, .update-profile-dialog form .btn-wrapper .form-btn {
   display: inline-block;
   vertical-align: middle;
   padding: 10px;
@@ -503,8 +549,8 @@ h1, h2, h3, h4, h5, h6, p {
   border: 1px solid #333333;
   cursor: pointer;
 }
-/* line 111, ../sass/partials/_add-item.sass */
-.media-dialog form .btn-wrapper .form-btn:hover, .media-dialog form .btn-wrapper .form-btn:focus {
+/* line 139, ../sass/partials/_add-item.sass */
+.media-dialog form .btn-wrapper .form-btn:hover, .media-dialog form .btn-wrapper .form-btn:focus, .update-profile-dialog form .btn-wrapper .form-btn:hover, .update-profile-dialog form .btn-wrapper .form-btn:focus {
   color: white;
   border-color: #d65152;
   background-color: #d65152;
@@ -746,7 +792,6 @@ h1, h2, h3, h4, h5, h6, p {
   max-width: 1264px;
   overflow: hidden;
   background-color: #2c3135;
-  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.65)), url("/static/images/default.jpg");
   background-position: top left;
   background-repeat: repeat;
   background-attachment: fixed;
@@ -755,7 +800,7 @@ h1, h2, h3, h4, h5, h6, p {
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
 }
-/* line 13, ../sass/partials/_profile.sass */
+/* line 12, ../sass/partials/_profile.sass */
 .profile .follow-btn {
   position: absolute;
   top: 30px;
@@ -765,71 +810,76 @@ h1, h2, h3, h4, h5, h6, p {
   color: white;
   background: transparent;
 }
-/* line 21, ../sass/partials/_profile.sass */
+/* line 20, ../sass/partials/_profile.sass */
+.profile .follow-btn.update-profile {
+  top: auto;
+  bottom: 30px;
+}
+/* line 23, ../sass/partials/_profile.sass */
 .profile .follow-btn:hover {
   background-color: #d65152;
   border-color: #d65152;
 }
-/* line 24, ../sass/partials/_profile.sass */
+/* line 26, ../sass/partials/_profile.sass */
 .profile .follow-btn i {
   display: inline-block;
   vertical-align: middle;
   font-size: 18px;
   margin-right: 9px;
 }
-/* line 28, ../sass/partials/_profile.sass */
+/* line 30, ../sass/partials/_profile.sass */
 .profile .follow-btn p {
   display: inline-block;
   vertical-align: middle;
 }
-/* line 30, ../sass/partials/_profile.sass */
+/* line 32, ../sass/partials/_profile.sass */
 .profile .profile-container {
   position: relative;
   width: 75%;
   overflow: hidden;
   margin: 0 auto;
 }
-/* line 35, ../sass/partials/_profile.sass */
+/* line 37, ../sass/partials/_profile.sass */
 .profile .profile-container .profile-pic {
   display: inline-block;
   vertical-align: middle;
   width: 29%;
   overflow: hidden;
 }
-/* line 39, ../sass/partials/_profile.sass */
+/* line 41, ../sass/partials/_profile.sass */
 .profile .profile-container .profile-pic .inner {
   padding: 40px 0 20px 40px;
   text-align: center;
   overflow: hidden;
 }
-/* line 43, ../sass/partials/_profile.sass */
+/* line 45, ../sass/partials/_profile.sass */
 .profile .profile-container .profile-pic .inner img {
   width: 120px;
   border: 4px solid white;
   border-radius: 50%;
 }
-/* line 47, ../sass/partials/_profile.sass */
+/* line 49, ../sass/partials/_profile.sass */
 .profile .profile-container .profile-desc {
   display: inline-block;
   vertical-align: middle;
   width: 45%;
   overflow: hidden;
 }
-/* line 51, ../sass/partials/_profile.sass */
+/* line 53, ../sass/partials/_profile.sass */
 .profile .profile-container .profile-desc .inner {
   color: white;
   padding: 40px 30px 20px 30px;
 }
-/* line 54, ../sass/partials/_profile.sass */
+/* line 56, ../sass/partials/_profile.sass */
 .profile .profile-container .profile-desc .inner h2 {
   margin-bottom: 2px;
 }
-/* line 56, ../sass/partials/_profile.sass */
+/* line 58, ../sass/partials/_profile.sass */
 .profile .profile-container .profile-desc .inner p {
   text-align: justify;
   margin-bottom: 10px;
 }
-/* line 59, ../sass/partials/_profile.sass */
+/* line 61, ../sass/partials/_profile.sass */
 .profile .profile-container .profile-desc .inner p i {
   display: inline-block;
   vertical-align: middle;
@@ -837,44 +887,44 @@ h1, h2, h3, h4, h5, h6, p {
   margin-right: 6px;
   color: #bbbbbb;
 }
-/* line 64, ../sass/partials/_profile.sass */
+/* line 66, ../sass/partials/_profile.sass */
 .profile .profile-container .profile-desc .inner p span {
   display: inline-block;
   vertical-align: middle;
   font-size: 11px;
   color: #bbbbbb;
 }
-/* line 68, ../sass/partials/_profile.sass */
+/* line 70, ../sass/partials/_profile.sass */
 .profile .profile-container .profile-num {
   display: inline-block;
   vertical-align: middle;
   width: 20%;
 }
-/* line 71, ../sass/partials/_profile.sass */
+/* line 73, ../sass/partials/_profile.sass */
 .profile .profile-container .profile-num .inner {
   color: #ffeb91;
   padding: 40px 40px 20px 0;
 }
-/* line 74, ../sass/partials/_profile.sass */
+/* line 76, ../sass/partials/_profile.sass */
 .profile .profile-container .profile-num .inner .big-num {
   display: block;
   font-size: 11px;
   text-align: center;
 }
-/* line 78, ../sass/partials/_profile.sass */
+/* line 80, ../sass/partials/_profile.sass */
 .profile .profile-container .profile-num .inner .big-num i {
   display: inline-block;
   vertical-align: top;
   font-size: 14px;
   margin-right: 3px;
 }
-/* line 83, ../sass/partials/_profile.sass */
+/* line 85, ../sass/partials/_profile.sass */
 .profile .profile-container .profile-num .inner .big-num span {
   display: block;
   font-size: 50px;
   font-weight: bolder;
 }
-/* line 87, ../sass/partials/_profile.sass */
+/* line 89, ../sass/partials/_profile.sass */
 .profile .profile-container .separator {
   position: relative;
   display: block;
@@ -883,20 +933,20 @@ h1, h2, h3, h4, h5, h6, p {
   margin: 0 auto;
   background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #ffffff 50%, rgba(0, 0, 0, 0) 100%);
 }
-/* line 94, ../sass/partials/_profile.sass */
+/* line 96, ../sass/partials/_profile.sass */
 .profile .profile-container .profile-socials {
   position: relative;
   display: block;
   width: 100%;
   overflow: hidden;
 }
-/* line 99, ../sass/partials/_profile.sass */
+/* line 101, ../sass/partials/_profile.sass */
 .profile .profile-container .profile-socials .inner {
   color: white;
   padding: 20px 40px 30px 40px;
   text-align: center;
 }
-/* line 103, ../sass/partials/_profile.sass */
+/* line 105, ../sass/partials/_profile.sass */
 .profile .profile-container .profile-socials .inner a {
   display: inline-block;
   vertical-align: middle;
@@ -905,17 +955,17 @@ h1, h2, h3, h4, h5, h6, p {
   transition: all ease 150ms;
   -webkit-transition: all ease 150ms;
 }
-/* line 108, ../sass/partials/_profile.sass */
+/* line 110, ../sass/partials/_profile.sass */
 .profile .profile-container .profile-socials .inner a:hover {
   -webkit-transform: translateY(-3px);
   -ms-transform: translateY(-3px);
   transform: translateY(-3px);
 }
-/* line 110, ../sass/partials/_profile.sass */
+/* line 112, ../sass/partials/_profile.sass */
 .profile .profile-container .profile-socials .inner a:hover i {
   color: #d65152;
 }
-/* line 112, ../sass/partials/_profile.sass */
+/* line 114, ../sass/partials/_profile.sass */
 .profile .profile-container .profile-socials .inner a i {
   display: inline-block;
   vertical-align: middle;

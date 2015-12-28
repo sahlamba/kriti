@@ -1,0 +1,67 @@
+<div class="update-profile-dialog">
+  <p class="heading">
+    <span class="text">Update Profile</span>
+  </p>
+  <form ng-submit="updateProfileCall(edit_profile)">
+    <div class="description" style="margin-bottom:0">
+      <!-- <p class="text-count name">About You</p> -->
+      <textarea
+        placeholder="Write something about yourself"
+        maxlength="200"
+        ng-model="edit_profile.aboutMe"></textarea>
+      <p class="text-count">{~edit_profile.aboutMe.length | fixUndefined~}/200</p>
+    </div>
+    <div class="social-links">
+      <div class="input-with-icon">
+        <i class="fi-social-facebook"></i>
+        <input type="text"
+          placeholder="/darthvader"
+          ng-model="edit_profile.facebook">
+      </div>
+      <div class="input-with-icon">
+        <i class="fi-social-twitter"></i>
+        <input type="text"
+          placeholder="@han-solo"
+          ng-model="edit_profile.twitter">
+      </div>
+      <div class="input-with-icon">
+        <i class="">Q</i>
+        <input type="text"
+          placeholder="/profile/yoda-1977"
+          ng-model="edit_profile.quora">
+      </div>
+      <div class="input-with-icon">
+        <i class="fa fa-wordpress"></i>
+        <input type="text"
+          placeholder="www.obi-wan.com"
+          ng-model="edit_profile.blog">
+      </div>
+      <div class="input-with-icon">
+        <i class="fi-social-500px"></i>
+        <input type="text"
+          placeholder="/lukeskywalker"
+          ng-model="edit_profile.px500">
+      </div>
+      <div class="input-with-icon">
+        <i class="fi-social-behance"></i>
+        <input type="text"
+          placeholder="/qui-gon-jinn"
+          ng-model="edit_profile.behance">
+      </div>
+      <div class="input-with-icon">
+        <i class="fi-social-dribbble"></i>
+        <input type="text"
+          placeholder="/r2d2-c3po"
+          ng-model="edit_profile.dribbble">
+      </div>
+    </div>
+    <div class="btn-wrapper">
+      <p class="info">Please enter full links (including http).</p>
+    </div>
+    <div class="btn-wrapper text-right" style="margin-top:10px">
+      <button class="form-btn" type="submit">
+        <i ng-class="{'fa fa-circle-o-notch fa-spin': edit_profile.updating, 'fi-check': !edit_profile.updating}"></i>&nbsp;&nbsp;Update
+      </button>
+    </div>
+  </form>
+</div>
