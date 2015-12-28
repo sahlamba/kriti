@@ -32,7 +32,7 @@ angular.module('kriti', [
   }])
   .run(function ($rootScope) {
     Messenger.options = { // Options for Notification plugin
-      extraClasses: 'messenger-fixed messenger-on-top messenger-on-right',
+      extraClasses: 'messenger-fixed messenger-on-top',
       theme: 'air'
     };
     // Autoscroll to top on navigating to new route

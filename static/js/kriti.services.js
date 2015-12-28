@@ -13,7 +13,7 @@ angular.module('kriti.services')
       notify: function (msg, typeOfNoti) {
         Messenger().post({
           message: msg,
-          hideAfter: 5, // seconds
+          hideAfter: 3, // seconds
           hideOnNavigate: true,
           showCloseButton: true,
           type: typeOfNoti
