@@ -9,14 +9,14 @@
     <div class="profile-container">
       <div class="profile-pic">
         <div class="inner">
-          <img ng-src="{~ profileUser.photo ~}" />
+          <img ng-src="{~ profileUser.photo ~}" alt="{~profileUser.name~}"/>
         </div>
       </div>
       <div class="profile-desc">
         <div class="inner">
           <h2 ng-bind="profileUser.name"></h2>
           <p><i class="fa fa-graduation-cap"></i><span ng-bind="profileUser.branch"></span></p>
-          <p ng-bind="profileUser.aboutMe"></p>
+          <p ng-bind="profileUser.aboutMe" ng-if="stringExists(profileUser.aboutMe)"></p>
         </div>
       </div>
       <div class="profile-num">
@@ -30,10 +30,20 @@
       <div class="separator"></div>
       <div class="profile-socials">
         <div class="inner">
-          <a ng-href="{~profileUser.facebook[0]~}" target="_blank"><i class="fi-social-facebook"></i></a>
-          <a ng-href="{~profileUser.twitter[0]~}" target="_blank"><i class="fi-social-twitter"></i></a>
-          <a ng-href="{~profileUser.quora[0]~}" target="_blank"><i class="">Q</i></a>
-          <a ng-href="{~profileUser.blog[0]~}" target="_blank"><i class="fi-social-blogger"></i></a>
+          <a ng-href="{~profileUser.px500[0]~}"
+            ng-if="stringExists(profileUser.px500[0])" target="_blank"><i class="fi-social-500px"></i></a>
+          <a ng-href="{~profileUser.behance[0]~}"
+            ng-if="stringExists(profileUser.behance[0])" target="_blank"><i class="fi-social-behance"></i></a>
+          <a ng-href="{~profileUser.dribbble[0]~}"
+            ng-if="stringExists(profileUser.dribbble[0])" target="_blank"><i class="fi-social-dribbble"></i></a>
+          <a ng-href="{~profileUser.blog[0]~}"
+            ng-if="stringExists(profileUser.blog[0])" target="_blank"><i class="fa fa-wordpress"></i></a>
+          <a ng-href="{~profileUser.facebook[0]~}"
+            ng-if="stringExists(profileUser.facebook[0])" target="_blank"><i class="fi-social-facebook"></i></a>
+          <a ng-href="{~profileUser.twitter[0]~}"
+            ng-if="stringExists(profileUser.twitter[0])" target="_blank"><i class="fi-social-twitter"></i></a>
+          <a ng-href="{~profileUser.quora[0]~}"
+            ng-if="stringExists(profileUser.quora[0])" target="_blank"><i class="">Q</i></a>
         </div>
       </div>
     </div>

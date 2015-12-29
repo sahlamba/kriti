@@ -80,6 +80,23 @@ angular.module('kriti.main')
         }
       }
 
+      // Existential Check for strings
+      $rootScope.stringExists = function (str) {
+        if (str !== undefined) {
+          if (str !== null) {
+            if (str.trim() !== '') {
+              return true;
+            } else {
+              return false;
+            }
+          } else {
+            return false;
+          }
+        } else {
+          return false;
+        }
+      };
+
       // Put in rootScope to use in lightbox also, appreciates item
       $rootScope.appreciateItem = function (item) {
         ItemService.appreciateItem(item.id, !item.appreciated).then(function (resp) {
