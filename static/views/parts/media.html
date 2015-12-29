@@ -18,16 +18,21 @@
       <p class="text-count">{~newItem.item.description.length | fixUndefined~}/{~newItem.item.maxDescCount~}</p>
     </div>
     <div class="btn-wrapper">
+      <div ngf-src="mediaFile" ngf-background="mediaFile">
+        <div class="delete-button" ng-click="mediaFile = null;">
+          <p>&times;</p>
+        </div>
+      </div>
       <div class="form-btn" ngf-select name="file"
+        ng-hide="mediaFile"
         ng-model="mediaFile"
         ngf-accept="'image/*'"
         ngf-max-size="10MB"
         required="">
         <i class="fi-upload"></i>&nbsp;&nbsp;Upload JPG, PNG or GIF <sup>*</sup>
       </div>
-      <img ngf-thumbnail="mediaFile">
     </div>
-    <div class="btn-wrapper text-right">
+    <div class="btn-wrapper text-right" style="vertical-align:bottom">
       <button class="form-btn" type="submit">
         <i ng-class="{'fa fa-circle-o-notch fa-spin': newItem.uploading, 'fi-check': !newItem.uploading}"></i>&nbsp;&nbsp;Post
       </button>

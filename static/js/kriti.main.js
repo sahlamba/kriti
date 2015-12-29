@@ -129,13 +129,14 @@ angular.module('kriti.main')
         },
         uploading: false, // Flag to check if uploading in progress
         openDialog: function () {
-          // Opens dialog
-          ngDialog.open({
-            template: '/static/views/parts/add.html',
-            className: 'ngdialog-theme-default',
-            overlay: true,
-            scope: $scope
-          });
+          // Opens dialog - Not Required until V2.0
+          // ngDialog.open({
+          //   template: '/static/views/parts/add.html',
+          //   className: 'ngdialog-theme-default',
+          //   overlay: true,
+          //   scope: $scope
+          // });
+          this.openForm('media');
         },
         openForm: function (theOne) {
           // Open requested form dialog
